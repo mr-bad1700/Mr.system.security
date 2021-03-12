@@ -1036,7 +1036,7 @@ Enabled:
 Maximum Ban : ${config[message.guild.id].banLimit}
 -
 AntiKick
-Enabled: <a:mars_40:791104185424805918>
+Enabled: 
 Maximum Kick : ${config[message.guild.id].kickLimits}
 -
 AntiChannelD
@@ -1044,11 +1044,11 @@ Enabled:
 Maximum Delete : ${config[message.guild.id].chaDelLimit}
 -
 AntiChannelC
-Enabled: <a:mars_40:791104185424805918>
+Enabled: 
 Maximum Create : ${config[message.guild.id].chaCrLimit}
 -
 AntiRoleD
-Enabled: <a:mars_40:791104185424805918>
+Enabled: 
 Maximum Delete : ${config[message.guild.id].roleDelLimit}
 -
 AntiRoleC
