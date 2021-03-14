@@ -75,13 +75,7 @@ client.on("message", message => {
   
   
 
-client.on("ready", () => {
-setInterval(() => {
-  client.user.setActivity(
-  `${prefix}help`,
-  );
-}, 2000);
-})
+
 client.on("warn", (info) => console.log(info));
 client.on("error", console.error);
 
