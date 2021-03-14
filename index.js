@@ -279,7 +279,7 @@ client.on("message", message => {
   if (message.content.startsWith(prefix + "anti")) {
     if (message.author.id !== message.guild.ownerID) 
     return message.channel.send(
-        "**  بەس ئۆنەڕشیڤ،ئەتوانێ ئۆنی بکات **"
+        "**  Ownership can use this command. **"
       );
     if (message.content.startsWith(prefix + "anti ban")) {
       
