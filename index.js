@@ -1362,7 +1362,7 @@ client.on("message", message => {
       )
       .addField("**Servers**", `[ ${client.guilds.cache.size} ]`, true)
       .addField("**Channels**", `[ ${client.channels.cache.size} ]`, true)
-      .addField("**Users**", `[ 1987397 ]`, true)
+      .addField("**Users**", `[ ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)} ]`, true)
       .addField("**My Name**", `[ ${client.user.tag} ]`, true)
       .addField("**My ID**", `[ ${client.user.id} ]`, true)
       .addField("**DiscordJS**", `[ ${Discord.version} ]`, true)
