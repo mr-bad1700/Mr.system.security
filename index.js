@@ -931,32 +931,17 @@ client.on("guildMemberRemove", async member => {
 });
 
 //////
+// ======== { • anti bots • }======== //
 
 let antibots = JSON.parse(fs.readFileSync("./antibots.json", "utf8")); //require antihack.json file
 client.on("message", message => {
   if (message.content.startsWith(prefix + "anti bot on")) {
-    if (cooldown.has(message.author.id)) {
-      return message.channel
-        .send(` | Please wait for 10 second`)
-        .then(m => {
-          m.delete({ timeout: cdtime * 600 });
-        });
-    }
-
-    cooldown.add(message.author.id);
-
-    setTimeout(() => {
-      cooldown.delete(message.author.id);
-    }, cdtime * 1000);
-    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
     if (!message.channel.guild) return;
-    if (!message.member.hasPermission("OWNERSHIP"))
-      return;
-      
+    if (!message.member.hasPermission("Ownership")) return;
     antibots[message.guild.id] = {
       onoff: "On"
     };
-    message.channel.send(`**${rast}  AntiBot Is \`Enable\` **`);
+    message.channel.send(`**➕ | The anti bot is \`ON\`.**`);
     fs.writeFile("./antibots.json", JSON.stringify(antibots), err => {
       if (err)
         console.error(err).catch(err => {
@@ -965,28 +950,15 @@ client.on("message", message => {
     });
   }
 });
-
+////////////////////////////////
 client.on("message", message => {
   if (message.content.startsWith(prefix + "anti bot off")) {
-    if (cooldown.has(message.author.id)) {
-      return message.channel
-        .send(` | Please wait for 10 second`)
-        .then(m => {
-          m.delete({ timeout: cdtime * 600 });
-        });
-    }
-
-    cooldown.add(message.author.id);
-
-    setTimeout(() => {
-      cooldown.delete(message.author.id);
-    }, cdtime * 1000);
     if (!message.channel.guild) return;
-    if (!message.member.hasPermission("OWNERSHIP")) return; 
+    if (!message.member.hasPermission("Ownership")) return;
     antibots[message.guild.id] = {
       onoff: "Off"
     };
-    message.channel.send(`**${rast}  AntiBot Is \`Disable\` **`);
+    message.channel.send(`**➖ | The anti bot is \`OFF\`.**`);
     fs.writeFile("./antibots.json", JSON.stringify(antibots), err => {
       if (err)
         console.error(err).catch(err => {
@@ -995,7 +967,7 @@ client.on("message", message => {
     });
   }
 });
-
+////////////////
 client.on("guildMemberAdd", member => {
   if (!antibots[member.guild.id])
     antibots[member.guild.id] = {
@@ -1004,13 +976,17 @@ client.on("guildMemberAdd", member => {
   if (antibots[member.guild.id].onoff === "Off") return;
   if (member.user.bot) return member.kick();
 });
-
+////////////////
 fs.writeFile("./antibots.json", JSON.stringify(antibots), err => {
   if (err)
     console.error(err).catch(err => {
       console.error(err);
     });
 });
+
+
+
+
 client.on("message", message => {
   if (message.content === prefix + "setting") {
     if (cooldown.has(message.author.id)) {
