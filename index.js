@@ -313,7 +313,7 @@ __This is a little prefix__
 
 
 client.on("message", message => {
-  if (message.content === prefix + "help info") {
+  if (message.content === prefix + "help giveaway") {
     let Dashboard = `
 __Giveaway Commands__ 
 > end <id-message>
