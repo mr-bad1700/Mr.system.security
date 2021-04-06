@@ -47,19 +47,21 @@ client.on("ready", () => {
 
   
   
-client.on('message',async message => {
-  if(message.content.startsWith(prefix + "avatar")) {
- 
-    let args = message.content.split(" ").slice(1).join(" ");   
-   let member = message.mentions.users.first() || message.author
-    let avatar = member.displayAvatarURL({size: 1024})
-      const embed = new Discord.MessageEmbed()
-        .setTitle(`${member.username}'s avatar`)
-        .setImage(avatar)
-        .setColor("BLACK")
-        message.channel.send(embed);
-    
-  }})
+client.on('message', message => {
+if(message.content.startsWith("*bawan")) {
+  let slot1 = ['🖤', '🤍', '❤️', '🖤', '💜', '💚', '💛', '🧡'];
+  let slots1 = `${slot1[Math.floor(Math.random() * slot1.length)]}`;
+  let slots2 = `${slot1[Math.floor(Math.random() * slot1.length)]}`;
+  let slots3 = `${slot1[Math.floor(Math.random() * slot1.length)]}`;
+  let we;
+  if(slots1 === slots2 && slots2 === slots3) {
+    we = "برتەوە!"
+  } else {
+    we = "دۆڕایت!"
+  }
+  message.channel.send(`${slots1} | ${slots2} | ${slots3} - ${we}`)
+}
+});
 
 
 
