@@ -54,7 +54,7 @@ client.on("ready", () => {
 })
 
 client.on("message", async message => {
-  if (message.content === prefix + "anime") {
+  if (message.content === "m/anime") {
     let random = Math.floor(Math.random() * 107)
     let text = await fetch(`https://hdqwalls.com/category/anime-wallpapers/page/${random}`, { method: "GET" })
     text = await text.text()
