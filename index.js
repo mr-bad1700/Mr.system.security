@@ -172,8 +172,8 @@ __This is a little prefix__
     var addserver = `https://discord.com/api/oauth2/authorize?client_id=764487416748310570&permissions=8&scope=bot`;
     var SUPPORT = `https://discord.gg/Zhwg47uFun`;
     var EMBED = new Discord.MessageEmbed()
+      .setAuthor(client.user.username, client.user.avatarURL())
       .setColor(color)
-      .setTitle(`${message.author.username}`)
       .setDescription(
         `${Dashboard}
   **[invite bot ](${addserver})** | **[ Server Suppurt](${SUPPORT})** `
@@ -1384,7 +1384,7 @@ client.on("message", message => {
       .addField("**Bot-Owners**", `<@596060641740193856>`, true)
       .addField("**My Prefix**", `[ ${prefix} ]`, true)
       .addField("**My Language**", `[ Java Script ]`, true)
-      .setFooter("Security");
+      .setFooter(`client.user.username`);
 
     message.channel.send(tnx);
   }
