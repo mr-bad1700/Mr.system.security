@@ -46,7 +46,20 @@ client.on("ready", () => {
   
 
   
-
+  
+client.on('message',async message => {
+  if(message.content.startsWith(prefix + "avatar")) {
+ 
+    let args = message.content.split(" ").slice(1).join(" ");   
+   let member = message.mentions.users.first() || message.author
+    let avatar = member.displayAvatarURL({size: 1024})
+      const embed = new Discord.MessageEmbed()
+        .setTitle(`${member.username}'s avatar`)
+        .setImage(avatar)
+        .setColor("BLACK")
+        message.channel.send(embed);
+    
+  }})
 
 
 
