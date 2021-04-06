@@ -104,7 +104,6 @@ __This is a little prefix__
         `${Dashboard}
   **[invite bot ](${addserver})** | **[ Server Suppurt](${SUPPORT})** `
       )
-      .setDescription(`${message.author.username}`)
       .setImage("");
     message.channel.send(EMBED);
     message.react("");
