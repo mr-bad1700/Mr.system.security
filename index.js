@@ -88,10 +88,48 @@ client.on("error", console.error);
 //////
 
 client.on("message", message => {
+  if (message.content === prefix + "help music") {
+    let Dashboard = `
+__Music Commands__
+> play (p) , clip , clips ,
+> loop (l) , lyrics (ly) ,
+> move (mv) , np , pause ,
+> playlist (pl) , queue (q),
+> remove (rm) , search ,
+> shuffle , skip (s) , 
+> skipto (st) , stop , 
+> uptime (u) , volume (v)
+__This is a little prefix__
+> [ ${prefix} ]
+`;
+    var addserver = `https://discord.com/api/oauth2/authorize?client_id=764487416748310570&permissions=8&scope=bot`;
+    var SUPPORT = `https://discord.gg/Zhwg47uFun`;
+    var EMBED = new Discord.MessageEmbed()
+      .setColor(color)
+      .setTitle(`${message.author.username}`)
+      .setDescription(
+        `${Dashboard}
+  **[invite bot ](${addserver})** | **[ Server Suppurt](${SUPPORT})** `
+      )
+      .setImage("");
+    message.channel.send(EMBED);
+  }
+});
+
+
+
+
+
+
+
+
+client.on("message", message => {
   if (message.content === prefix + "help") {
     let Dashboard = `
+__Help Commands__
 > __help admin__  to viwe command admin
 > __help info__  to viwe command all info
+> __help music__ to see command music
 __This is a little prefix__
 > [ ${prefix} ]
 `;
