@@ -98,13 +98,13 @@ __This is a little prefix__
     var addserver = `https://discord.com/api/oauth2/authorize?client_id=764487416748310570&permissions=8&scope=bot`;
     var SUPPORT = `https://discord.gg/Zhwg47uFun`;
     var EMBED = new Discord.MessageEmbed()
+      .setColor(color)
       .setTitle(`${message.author.username}`)
       .setDescription(
         `${Dashboard}
-  **[invite bot ](${addserver})** | **[ Server Suppurt](${SUPPORT})** 
-${message.author.username}
-`
+  **[invite bot ](${addserver})** | **[ Server Suppurt](${SUPPORT})** `
       )
+      .setDescription(`${message.author.username}`)
       .setImage("");
     message.channel.send(EMBED);
     message.react("");
@@ -137,6 +137,7 @@ __This is a little prefix__
     var addserver = `https://discord.com/api/oauth2/authorize?client_id=764487416748310570&permissions=8&scope=bot`;
     var SUPPORT = `https://discord.gg/Zhwg47uFun`;
     var EMBED = new Discord.MessageEmbed()
+      .setColor(color)
       .setTitle(`${message.author.username}`)
       .setDescription(
         `${Dashboard}
@@ -163,6 +164,7 @@ __This is a little prefix__
     var addserver = `https://discord.com/api/oauth2/authorize?client_id=764487416748310570&permissions=8&scope=bot`;
     var SUPPORT = `https://discord.gg/Zhwg47uFun`;
     var EMBED = new Discord.MessageEmbed()
+      .setColor(color)
       .setTitle(`${message.author.username}`)
       .setDescription(
         `${Dashboard}
@@ -302,7 +304,7 @@ const ghallat = "";
 const ghallatw = "";
 const logosec = "";
 const warn = "";
-const color = "";
+const color = "#000001";
 
 let anti = JSON.parse(fs.readFileSync("./antigreff.json", "UTF8"));
 let config = JSON.parse(fs.readFileSync("./configg.json", "UTF8"));
