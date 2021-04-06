@@ -226,7 +226,7 @@ client.on("message", message => {
     let Dashboard = `
 __Help Commands__
 > __help admin__  to viwe command admin
-> __help info__  to viwe command all info
+> __help public__  to viwe command all info
 > __help music__ to see command music
 > __help giveaway__ to viwe command giveaways
 __This is a little prefix__
@@ -286,7 +286,7 @@ __This is a little prefix__
 
 
 client.on("message", message => {
-  if (message.content === prefix + "help info") {
+  if (message.content === prefix + "help public") {
     let Dashboard = `
 __Public Commands__ 
 > user info , 
