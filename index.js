@@ -91,14 +91,12 @@ client.on("message", message => {
   if (message.content === prefix + "help music") {
     let Dashboard = `
 __Music Commands__
-> play (p) , clip , clips ,
-> loop (l) , lyrics (ly) ,
-> move (mv) , np , pause ,
-> playlist (pl) , queue (q),
-> remove (rm) , search ,
-> shuffle , skip (s) , 
-> skipto (st) , stop , 
-> uptime (u) , volume (v)
+> play , clip , clips ,
+> loop , lyrics , move ,
+> np , pause , playlist ,
+> queue , remove , search ,
+> shuffle , skip  , skipto
+> stop , uptime , volume .
 __This is a little prefix__
 > [ ${prefix} ]
 `;
@@ -144,6 +142,7 @@ __This is a little prefix__
       )
       .setImage("");
     message.channel.send(EMBED);
+    message.react("🎧");
   }
 });
 
