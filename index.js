@@ -90,8 +90,8 @@ client.on("error", console.error);
 client.on("message", message => {
   if (message.content === prefix + "help") {
     let Dashboard = `
-> __**help admin**__ to viwe command admin
-> __**help info**__ to viwe command all info
+> __help admin__  to viwe command admin
+> __help info__  to viwe command all info
 __This is a little prefix__
 > [ ${prefix} ]
 `;
@@ -101,11 +101,13 @@ __This is a little prefix__
       .setTitle(`${message.author.username}`)
       .setDescription(
         `${Dashboard}
-  **[invite bot ](${addserver})** | **[ Server Suppurt](${SUPPORT})** `
+  **[invite bot ](${addserver})** | **[ Server Suppurt](${SUPPORT})** 
+${message.author.username}
+`
       )
       .setImage("");
     message.channel.send(EMBED);
-    message.react("ℹ️");
+    message.react("");
   }
 });
 
