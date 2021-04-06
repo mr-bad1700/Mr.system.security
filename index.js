@@ -47,21 +47,7 @@ client.on("ready", () => {
 
   
   
-client.on('message', message => {
-if(message.content.startsWith("*bawan")) {
-  let slot1 = ['🖤', '🤍', '❤️', '🖤', '💜', '💚', '💛', '🧡'];
-  let slots1 = `${slot1[Math.floor(Math.random() * slot1.length)]}`;
-  let slots2 = `${slot1[Math.floor(Math.random() * slot1.length)]}`;
-  let slots3 = `${slot1[Math.floor(Math.random() * slot1.length)]}`;
-  let we;
-  if(slots1 === slots2 && slots2 === slots3) {
-    we = "برتەوە!"
-  } else {
-    we = "دۆڕایت!"
-  }
-  message.channel.send(`${slots1} | ${slots2} | ${slots3} - ${we}`)
-}
-});
+
 
 
 
@@ -242,6 +228,7 @@ __Help Commands__
 > __help admin__  to viwe command admin
 > __help info__  to viwe command all info
 > __help music__ to see command music
+> __help giveaway__ to viwe command giveaways
 __This is a little prefix__
 > [ ${prefix} ]
 `;
@@ -321,6 +308,33 @@ __This is a little prefix__
       .setImage("");
     message.channel.send(EMBED);
     message.react("ℹ️");
+  }
+});
+
+
+client.on("message", message => {
+  if (message.content === prefix + "help info") {
+    let Dashboard = `
+__Giveaway Commands__ 
+> end <id-message>
+> start 
+> delete
+> create <#channel-name>
+__This is a little prefix__
+> [ ${prefix} ]
+`;
+    var addserver = `https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot`;
+    var SUPPORT = `https://discord.gg/Zhwg47uFun`;
+    var EMBED = new Discord.MessageEmbed()
+      .setColor(color)
+      .setAuthor(client.user.username, client.user.avatarURL())
+      .setDescription(
+        `${Dashboard}
+  **[invite bot ](${addserver})** | **[ Server Suppurt](${SUPPORT})** `
+      )
+      .setImage("");
+    message.channel.send(EMBED);
+    message.react("🎉");
   }
 });
 
