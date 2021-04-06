@@ -46,7 +46,96 @@ client.on("ready", () => {
   
   
   
-  
+ client.on("message", async message  => {
+if(message.content.startsWith(prefix+"server info test")) {
+
+  if(message.author.bot) return;
+if(!message.channel.guild) return;
+
+let args = message.content.split(" ").slice(1);
+
+const os = require('os')
+
+        let region;
+        switch (message.guild.region) {
+            case "europe":
+                region = '🇪🇺 Europe';
+                break;
+            case "us-east":
+                region = '🇺🇸 us-east'
+                break;
+            case "us-west":
+                region = '🇺🇸 us-west';
+                break;
+            case "us-south":
+                region = '🇺🇸 us-south'
+                break;
+            case "us-central":
+                region = '🇺🇸 us-central'
+                break;
+        }
+
+        const embed = new Discord.MessageEmbed()
+            .setThumbnail(message.guild.iconURL({dynamic : true}))
+            .setColor('BLACK')
+            .setTitle(`${message.guild.name} server Info`)
+            .addFields(
+                {
+                    name: "__**Owner**__: ",
+                    value: `${message.guild.owner}`,
+                    inline: true
+                },
+                {
+                    name: "__**All Members**__: ",
+                    value: ` ${message.guild.memberCount} users`,
+                    inline: true
+                },
+                {
+                    name: "__**Members Online**__: ",
+                    value: ` ${message.guild.members.cache.filter(m => m.user.presence.status == "online").size} users online`,
+                    inline: true
+                },
+                {
+                    name: "__**All Bots**__: ",
+                    value: ` ${message.guild.members.cache.filter(m => m.user.bot).size} bots`,
+                    inline: true
+                },
+                {
+                    name: "__**Creation Date**__: ",
+                    value: message.guild.createdAt.toLocaleDateString("en-us"),
+                    inline: true
+                },
+                {
+                    name: "__**Roles Number**__: ",
+                    value: ` ${message.guild.roles.cache.size} roles in this server.`,
+                    inline: true,
+                },
+                {
+                    name: `__**Region**__: `,
+                    value: region,
+                    inline: true
+                },
+                {
+                    name: `__**Verified**__: `,
+                    value: message.guild.verified ? 'Server is verified' : `Not verified`,
+                    inline: true
+                },
+                {
+                    name: '__**Boosters**__: ',
+                    value: message.guild.premiumSubscriptionCount >= 1 ? ` ${message.guild.premiumSubscriptionCount} Boosters` : ` no boosters Found`,
+                    inline: true
+                },
+                {
+                    name: "__**Emojis**__: ",
+                    value: message.guild.emojis.cache.size >= 1 ? `All emojis ${message.guild.emojis.cache.size} !` : ' no emojis Found' ,
+                    inline: true
+                }
+            )
+        await message.channel.send(embed)
+    }
+}
+
+) 
   
   
   
@@ -189,7 +278,7 @@ __This is a little prefix__
 client.on("message", message => {
   if (message.content === prefix + "help info") {
     let Dashboard = `
-__Info Commands__ 
+__Public Commands__ 
 > user info , 
 > server info , 
 > ping , 
