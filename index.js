@@ -44,7 +44,8 @@ client.on("ready", () => {
   console.log(`${client.user.tag}`);
 });
   
-  
+//=================================[ serverinfo ]===========================//
+
   
  client.on("message", async message  => {
 if(message.content.startsWith(prefix+"server info")) {
@@ -81,52 +82,52 @@ const os = require('os')
             .setTitle(`${message.guild.name} server Info`)
             .addFields(
                 {
-                    name: "__**Owner**__: ",
+                    name: "__Owner__: ",
                     value: `${message.guild.owner}`,
                     inline: true
                 },
                 {
-                    name: "__**All Members**__: ",
+                    name: "__All Members__: ",
                     value: ` ${message.guild.memberCount} users`,
                     inline: true
                 },
                 {
-                    name: "__**Members Online**__: ",
+                    name: "__Members Online__: ",
                     value: ` ${message.guild.members.cache.filter(m => m.user.presence.status == "online").size} users online`,
                     inline: true
                 },
                 {
-                    name: "__**All Bots**__: ",
+                    name: "__All Bots__: ",
                     value: ` ${message.guild.members.cache.filter(m => m.user.bot).size} bots`,
                     inline: true
                 },
                 {
-                    name: "__**Creation Date**__: ",
+                    name: "__Creation Date__: ",
                     value: message.guild.createdAt.toLocaleDateString("en-us"),
                     inline: true
                 },
                 {
-                    name: "__**Roles Number**__: ",
+                    name: "__Roles Number__: ",
                     value: ` ${message.guild.roles.cache.size} roles in this server.`,
                     inline: true,
                 },
                 {
-                    name: `__**Region**__: `,
+                    name: `__Region__: `,
                     value: region,
                     inline: true
                 },
                 {
-                    name: `__**Verified**__: `,
+                    name: `__Verified__: `,
                     value: message.guild.verified ? 'Server is verified' : `Not verified`,
                     inline: true
                 },
                 {
-                    name: '__**Boosters**__: ',
+                    name: '__Boosters__: ',
                     value: message.guild.premiumSubscriptionCount >= 1 ? ` ${message.guild.premiumSubscriptionCount} Boosters` : ` no boosters Found`,
                     inline: true
                 },
                 {
-                    name: "__**Emojis**__: ",
+                    name: "__Emojis__: ",
                     value: message.guild.emojis.cache.size >= 1 ? `All emojis ${message.guild.emojis.cache.size} !` : ' no emojis Found' ,
                     inline: true
                 }
