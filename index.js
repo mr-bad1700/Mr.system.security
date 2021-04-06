@@ -55,8 +55,8 @@ client.on("ready", () => {
 client.on("message", message => {
   if (message.content.startsWith(prefix + "support")) {
     const embed = new Discord.MessageEmbed()
-      .setDescription(`[Join Server](https://discord.gg/Zhwg47uFun) | 
-[Invite Bot](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot)`)
+      .setDescription(`__[Join Server](https://discord.gg/Zhwg47uFun)__ *join to server bot*
+__[Invite Bot](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot)__ *thank you for invite bot* `)
       .setTimestamp()
       .setFooter(`By: ${message.author.tag}`)
       .setAuthor(client.user.username)
