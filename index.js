@@ -47,7 +47,7 @@ client.on("ready", () => {
   
   
  client.on("message", async message  => {
-if(message.content.startsWith(prefix+"server info test")) {
+if(message.content.startsWith(prefix+"server info")) {
 
   if(message.author.bot) return;
 if(!message.channel.guild) return;
@@ -1301,41 +1301,7 @@ client.on("message", async message => {
   }
 });
 
-//=================================[ serverinfo ]===========================//
 
-client.on("message", message => {
-  //
-  if (message.content.startsWith(prefix + "server info")) {
-    if (cooldown.has(message.author.id)) {
-      return message.channel
-        .send(` | Please wait for 10 second`)
-        .then(m => {
-          m.delete({ timeout: cdtime * 600 });
-        });
-    }
-
-    cooldown.add(message.author.id);
-
-    setTimeout(() => {
-      cooldown.delete(message.author.id);
-    }, cdtime * 1000);
-    var EMBED = new Discord.MessageEmbed()
-      .setTitle("server info")
-      .addField("server name", `${message.guild.name}`)
-      .addField("server id", `${message.guild.id}`)
-      .addField("server owner", `${message.guild.owner}`)
-      .addField("members", `${message.guild.memberCount}`)
-      .addField("Server roles", `${message.guild.roles.cache.size}`)
-      .addField("server channels", `${message.guild.channels.cache.size}`)
-      .addField("server region", `${message.guild.region}`)
-      .addField("created in", `${message.guild.createdAt.toLocaleString()}`)
-      .addField("Boost", `${message.guild.premiumSubscriptionCount}`)
-
-      .setColor("BLACK")
-      .setFooter(`Requsted by ${message.author.username}`);
-    message.channel.send(EMBED);
-  }
-});
 
 //=================================[ userinfo ]=============================//
 
