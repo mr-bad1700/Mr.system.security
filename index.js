@@ -104,7 +104,7 @@ __This is a little prefix__
     var SUPPORT = `https://discord.gg/Zhwg47uFun`;
     var EMBED = new Discord.MessageEmbed()
       .setColor(color)
-      .setTitle(`${message.author.username}`)
+      .setTitle(`Music`)
       .setDescription(
         `${Dashboard}
   **[invite bot ](${addserver})** | **[ Server Suppurt](${SUPPORT})** `
