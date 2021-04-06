@@ -106,7 +106,6 @@ __This is a little prefix__
       )
       .setImage("");
     message.channel.send(EMBED);
-    message.react("");
   }
 });
 
