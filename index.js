@@ -95,6 +95,14 @@ client.on("message", message => {
 __This is a little prefix__
 > [ ${prefix} ]
 `;
+    var addserver = `https://discord.com/api/oauth2/authorize?client_id=764487416748310570&permissions=8&scope=bot`;
+    var SUPPORT = `https://discord.gg/Zhwg47uFun`;
+    var EMBED = new Discord.MessageEmbed()
+      .setTitle(`${message.author.username}`)
+      .setDescription(
+        `${Dashboard}
+  **[invite bot ](${addserver})** | **[ Server Suppurt](${SUPPORT})** `
+      )
       .setImage("");
     message.channel.send(EMBED);
     message.react("ℹ️");
