@@ -55,7 +55,8 @@ client.on("ready", () => {
 client.on("message", message => {
   if (message.content.startsWith(prefix + "support")) {
     const embed = new Discord.MessageEmbed()
-      .setDescription(`[Support](https://discord.gg/Zhwg47uFun)`)
+      .setDescription(`[Join Server](https://discord.gg/Zhwg47uFun) | 
+[Invite Bot](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot)`)
       .setTimestamp()
       .setFooter(`By: ${message.author.tag}`)
       .setAuthor(client.user.username)
@@ -100,7 +101,7 @@ __Music Commands__
 __This is a little prefix__
 > [ ${prefix} ]
 `;
-    var addserver = `https://discord.com/api/oauth2/authorize?client_id=764487416748310570&permissions=8&scope=bot`;
+    var addserver = `https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot`;
     var SUPPORT = `https://discord.gg/Zhwg47uFun`;
     var EMBED = new Discord.MessageEmbed()
       .setColor(color)
@@ -132,7 +133,7 @@ __Help Commands__
 __This is a little prefix__
 > [ ${prefix} ]
 `;
-    var addserver = `https://discord.com/api/oauth2/authorize?client_id=764487416748310570&permissions=8&scope=bot`;
+    var addserver = `https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot`;
     var SUPPORT = `https://discord.gg/Zhwg47uFun`;
     var EMBED = new Discord.MessageEmbed()
       .setColor(color)
@@ -169,7 +170,7 @@ __Moderation Commands__
 __This is a little prefix__
 > [ ${prefix} ]
 `;
-    var addserver = `https://discord.com/api/oauth2/authorize?client_id=764487416748310570&permissions=8&scope=bot`;
+    var addserver = `https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot`;
     var SUPPORT = `https://discord.gg/Zhwg47uFun`;
     var EMBED = new Discord.MessageEmbed()
       .setAuthor(client.user.username, client.user.avatarURL())
@@ -196,7 +197,7 @@ __Info Commands__
 __This is a little prefix__
 > [ ${prefix} ]
 `;
-    var addserver = `https://discord.com/api/oauth2/authorize?client_id=764487416748310570&permissions=8&scope=bot`;
+    var addserver = `https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot`;
     var SUPPORT = `https://discord.gg/Zhwg47uFun`;
     var EMBED = new Discord.MessageEmbed()
       .setColor(color)
