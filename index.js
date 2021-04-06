@@ -44,6 +44,86 @@ client.on("ready", () => {
   console.log(`${client.user.tag}`);
 });
   
+
+//AutoRole Command
+
+const db = require("quick.db")
+module.exports.run = async(client, message, args) => {
+
+
+    const perms_bot = new Discord.MessageEmbed()
+  .setDescription("i don't have permission (**MANAGE_ROLES)**")
+.setColor("RED")
+
+    if (!message.guild.me.hasPermission("MANAGE_ROLES")) return message.channel.send(perms_bot)
+    
+const info = new Discord.MessageEmbed()
+    .setDescription("Usage: `!autorole on/off <@&role>` **") 
+    .setColor("GREEN")
+  if(!args[0]) return message.channel.send(info)
+  
+  if(args[0] === "on") {
+  
+  const embed = new Discord.MessageEmbed()
+.setDescription("You don't have permission (MANAGE_ROLES)**")
+.setColor("RED")
+    // If the member doesn't have enough permissions
+    
+if(!message.member.hasPermission('MANAGE_ROLES')){
+        return message.channel.send(embed);
+    }
+    
+const embed2 = new Discord.MessageEmbed()
+.setDescription("i don't have permission (MANAGE_ROLES)**")
+.setColor("RED")
+
+  if(!message.guild.me.hasPermission("MANAGE_ROLES")) return message.channel.send(embed2)
+
+  const role_no = new Discord.MessageEmbed()
+  .setDescription(`Please mention a Role to set it as AutoRole**`)
+  .setColor("RED")
+  
+  let role = message.mentions.roles.first() || message.guild.roles.cache.find(r => r.name === args.slice(1).join(" ")) || message.guild.roles.cache.find(r => r.id === args[2])
+  if(!role) return message.channel.send(role_no)
+  
+  db.set("ar_" + message.guild.id, role.id)
+ 
+  const embed3 = new Discord.MessageEmbed()
+  .setDescription(`AutoRole role has been set to <@&${role.id}>**`)
+  .setColor("GREEN")
+  message.channel.send(embed3)
+  
+  } else if(args[0] === "off") {
+    let c = await db.fetch(`autorole_${message.guild.id}`)
+      const embed4 = new Discord.MessageEmbed()
+  .setDescription(`AutoRole is not Enable in this Server**`)
+  .setColor("RED")
+    if(c === null) return message.channel.send(embed4)
+    db.set("autorole_" + message.guild.id, null)
+  const embed5 = new Discord.MessageEmbed()
+  .setDescription(`AutoRole is now Disabled on this Server**`)
+  .setColor("GREEN")
+    message.channel.send(embed5)
+    
+  }
+}
+
+
+//put this in your main file
+
+
+client.on("guildMemberAdd", async memberrole => {
+const db = require("quick.db")
+let ar = await db.fetch(`autorole_${memberrole.guild.id}`)
+  if (ar === null) return;
+  let role = memberrole.guild.roles.cache.find(r => r.id === `${ar}`)
+  memberrole.roles.add(role.id)
+})
+
+
+
+
+
 //=================================[ serverinfo ]===========================//
 
   
