@@ -48,61 +48,7 @@ client.on("ready", () => {
 
 
 
-//=========={Anit-Bot}========//
 
-let antibots = JSON.parse(fs.readFileSync("./antibot.json", "utf8")); //require antihack.json file
-bot.on("message", message => {
-  if (message.content.startsWith(prefix + "anti bots on")) {
-    if (!message.member.hasPermission("Ownership")) return message.reply("gbx");
-    antibots[message.guild.id] = {
-      onoff: "On"
-    };
-    message.channel.send(
-      `You have **enabled** anti bot!`
-    );
-    fs.writeFile("./antibot.json", JSON.stringify(antibots), err => {
-      if (err)
-        console.error(err).catch(err => {
-          console.error(err);
-        });
-    });
-  }
-});
-//antihack with ON , OFF ! RARE CODE
-//LIKE PLUSBOT !
-
-bot.on("message", message => {
-  if (message.content.startsWith(prefix + "anti bots off")) {
-    if (!message.member.hasPermission("Ownership")) return message.reply("gbx");
-    antibots[message.guild.id] = {
-      onoff: "Off"
-    };
-    message.channel.send(
-      `You have disabled anti bot!`
-    );
-    fs.writeFile("./antibot.json", JSON.stringify(antibots), err => {
-      if (err)
-        console.error(err).catch(err => {
-          console.error(err);
-        });
-    });
-  }
-});
-bot.on("guildMemberAdd", member => {
-  if (!antibots[member.guild.id])
-    antibots[member.guild.id] = {
-      onoff: "Off"
-    };
-  if (antibots[member.guild.id].onoff === "Off") return;
-  if (member.user.bot) return member.kick();
-});
-
-fs.writeFile("./antibot.json", JSON.stringify(antibots), err => {
-  if (err)
-    console.error(err).catch(err => {
-      console.error(err);
-    });
-});
 
 
 
