@@ -1839,13 +1839,13 @@ client.on('message',async message => {
 
 //======= msg tag ========\\
 client.on('message', message => {
-if (message.content.startsWith('<@793156769483718707>')) {
+if (message.content.startsWith('<@764487416748310570>')) {
 message.reply('Hi ✨')
 }
 });
 
 client.on('message', message => {
-  if (message.content.startsWith("<@793156769483718707>")) {
+  if (message.content.startsWith("<@764487416748310570>")) {
    let embed = new Discord.MessageEmbed()
      .setAuthor(client.user.username, client.user.avatarURL())
      .setColor(config.color)
