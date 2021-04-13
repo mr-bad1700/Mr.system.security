@@ -1842,53 +1842,6 @@ client.on('message', message => {
 if (message.content.startsWith('<@764487416748310570>')) {
 message.reply('Hi ✨')
 }
-});
-
-client.on('message', message => {
-  if (message.content.startsWith("<@764487416748310570>")) {
-   let embed = new Discord.MessageEmbed()
-     .setAuthor(client.user.username, client.user.avatarURL())
-     .setColor(config.color)
-     .setFooter(message.member.displayName, message.author.displayAvatarURL())
-     .setDescription(`
-     > Hello sir how to can i help you ?
-     > Please type : __${prefix}help__ to see all commands
-     
-     > To report a bot send message for :
-     > <@596060641740193856>
-__Support__
-     > __[Discord Server](https://discord.gg/Zhwg47uFun)__ - __[Invite Bot](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot)__`)
-  message.channel.send(embed);
-    }
-});  
- 
- 
- 
-
-
-
-const leave = ["596060641740193856"] //owner id
- 
-client.on('message', message => {
-    var argresult = message.content.split(` `).slice(1).join(' ');
- 
- 
-client.on('message', message => {
-    var argresult = message.content.split(` `).slice(1).join(' ');
-      if (!leave.includes(message.author.id)) return;
- 
- 
-  if (message.content === (prefix + "leave")) {
-      
-    message.guild.leave();    
-      
-    message.channel.send('```DONE```')
-      
-    } 
-  
-})  
-}) 
-
 
 
 
