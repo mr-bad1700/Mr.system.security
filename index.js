@@ -365,6 +365,7 @@ __Security Commands__
 > ${prefix}anti roleD - [Number]
 > ${prefix}anti channelC - [Number]
 > ${prefix}anti channelD - [Number]
+> ${prefix}anti bot - [on/off]
 > ${prefix}setting
 __Moderation Commands__ 
 > lock , unlock , clear , ban , kick
