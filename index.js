@@ -1249,6 +1249,75 @@ client.on("guildMemberRemove", async member => {
 });
 
 //////
+const antibots = JSON.parse(fs.readFileSync('./antibots.json' , 'utf8'))
+  client.on('message', message => {
+    if(message.content.startsWith(prefix + "anti bot on")){
+          if(!message.channel.guild) return;
+        if(message.member.id !== message.guild.ownerID) return message.channel.send('Only Ownership can use this command')
+  antibots[message.guild.id] = {
+  onoff: 'On',
+  }
+  let embed = new Discord.MessageEmbed()
+      .setAuthor(message.author.username, message.author.avatarURL())
+      .setThumbnail(message.author.avatarURL())
+      .setTitle("**Done Check The Anti bots is on**") 
+      .addField("Server", `${message.guild.name}`)
+      .addField("Requested By:", `${message.author}`)
+      .setColor("#000001")
+      .setFooter(`${client.user.username}`)
+      .setTimestamp();
+    message.channel.send(embed);
+            fs.writeFile("./antibots.json", JSON.stringify(antibots), (err) => {
+              if (err) console.error(err)
+              .catch(err => {
+                console.error(err);
+            });
+              });
+            }
+ 
+          })
+  client.on('message', message => {
+    if(message.content.startsWith(prefix + "anti bot off")) {
+          if(!message.channel.guild) return;
+           if(message.member.id !== message.guild.ownerID)return;
+  antibots[message.guild.id] = {
+  onoff: 'Off',
+  }
+      let embed = new Discord.MessageEmbed()
+      .setAuthor(message.author.username, message.author.avatarURL())
+      .setThumbnail(message.author.avatarURL())
+      .setTitle("**Done Check The Anti bots is off**") 
+      .addField("Server", `${message.guild.name}`)
+      .addField("Requested By:", `${message.author}`)
+      .setColor("#000001")
+      .setFooter(`${client.user.username}`)
+      .setTimestamp();
+    message.channel.send(embed);
+            fs.writeFile("./antibots.json", JSON.stringify(antibots), (err) => {
+              if (err) console.error(err)
+              .catch(err => {
+                console.error(err);
+            });
+              });
+            }
+ 
+          })
+ 
+  client.on("guildMemberAdd", member => {
+    if(!antibots[member.guild.id]) antibots[member.guild.id] = {
+  onoff: 'Off'
+  }
+    if(antibots[member.guild.id].onoff === 'Off') return;
+  if(member.user.bot) return member.ban("**antibots is one!!**")
+  })
+ 
+  fs.writeFile("./antibots.json", JSON.stringify(antibots), (err) => {
+  if (err) console.error(err)
+  .catch(err => {
+  console.error(err);
+  });
+ 
+  })
 
 
 
@@ -1767,7 +1836,57 @@ client.on('message',async message => {
 
 
 
+//======= msg tag ========\\
+client.on('message', message => {
+if (message.content.startsWith('<@793156769483718707>')) {
+message.reply('Hi ✨')
+}
+});
 
+client.on('message', message => {
+  if (message.content.startsWith("<@793156769483718707>")) {
+   let embed = new Discord.MessageEmbed()
+     .setAuthor(client.user.username, client.user.avatarURL())
+     .setColor(config.color)
+     .setFooter(message.member.displayName, message.author.displayAvatarURL())
+     .setDescription(`
+     > Hello sir how to can i help you ?
+     > Please type : __${prefix}help__ to see all commands
+     
+     > To report a bot send message for :
+     > <@596060641740193856>
+__Support__
+     > __[Discord Server](https://discord.gg/Zhwg47uFun)__ - __[Invite Bot](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot)__`)
+  message.channel.send(embed);
+    }
+});  
+ 
+ 
+ 
+
+
+
+const leave = ["596060641740193856"] //owner id
+ 
+client.on('message', message => {
+    var argresult = message.content.split(` `).slice(1).join(' ');
+ 
+ 
+client.on('message', message => {
+    var argresult = message.content.split(` `).slice(1).join(' ');
+      if (!leave.includes(message.author.id)) return;
+ 
+ 
+  if (message.content === (prefix + "leave")) {
+      
+    message.guild.leave();    
+      
+    message.channel.send('```DONE```')
+      
+    } 
+  
+})  
+}) 
 
 
 
