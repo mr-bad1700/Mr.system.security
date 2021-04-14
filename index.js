@@ -1865,7 +1865,7 @@ client.on('message', message => {
      > To report a bot send message for :
      > <@596060641740193856>
 __Support__
-     > __[Discord Server](https://discord.gg/FJX5DBXZ)__ - __[Invite Bot](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot)__`)
+     > __[Discord Server](https://discord.gg/Zhwg47uFun)__ - __[Invite Bot](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot)__`)
   message.channel.send(embed);
     }
 }); 
