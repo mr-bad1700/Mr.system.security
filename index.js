@@ -1658,7 +1658,7 @@ client.on("message", message => {
       .addField("**Bot-Owners**", `<@596060641740193856>`, true)
       .addField("**My Prefix**", `[ ${prefix} ]`, true)
       .addField("**My Language**", `[ Java Script ]`, true)
-      .setFooter(`client.user.username`);
+      .setFooter(`${message.author.username}`);
 
     message.channel.send(tnx);
   }
