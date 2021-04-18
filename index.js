@@ -317,7 +317,7 @@ __This is a little prefix__
       .setAuthor(client.user.username, client.user.avatarURL())
       .setDescription(
         `${Dashboard}
-  **[invite bot ](${addserver})** | **[ Server Suppurt](${SUPPORT})** `
+  **[invite bot ](${addserver})** | **[ Server Support](${SUPPORT})** `
       )
       .setImage("");
     message.channel.send(EMBED);
@@ -350,7 +350,7 @@ __This is a little prefix__
       .setAuthor(client.user.username, client.user.avatarURL())
       .setDescription(
         `${Dashboard}
-  **[invite bot ](${addserver})** | **[ Server Suppurt](${SUPPORT})** `
+  **[invite bot ](${addserver})** | **[ Server Support](${SUPPORT})** `
       )
       .setImage("");
     message.channel.send(EMBED);
@@ -388,7 +388,7 @@ __This is a little prefix__
       .setColor(color)
       .setDescription(
         `${Dashboard}
-  **[invite bot ](${addserver})** | **[ Server Suppurt](${SUPPORT})** `
+  **[invite bot ](${addserver})** | **[ Server Support](${SUPPORT})** `
       )
       .setImage("");
     message.channel.send(EMBED);
@@ -415,7 +415,7 @@ __This is a little prefix__
       .setAuthor(client.user.username, client.user.avatarURL())
       .setDescription(
         `${Dashboard}
-  **[invite bot ](${addserver})** | **[ Server Suppurt](${SUPPORT})** `
+  **[invite bot ](${addserver})** | **[ Server Support](${SUPPORT})** `
       )
       .setImage("");
     message.channel.send(EMBED);
@@ -442,7 +442,7 @@ __This is a little prefix__
       .setAuthor(client.user.username, client.user.avatarURL())
       .setDescription(
         `${Dashboard}
-  **[invite bot ](${addserver})** | **[ Server Suppurt](${SUPPORT})** `
+  **[invite bot ](${addserver})** | **[ Server Support](${SUPPORT})** `
       )
       .setImage("");
     message.channel.send(EMBED);
