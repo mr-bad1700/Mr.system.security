@@ -44,7 +44,17 @@ client.on("ready", () => {
   console.log(`${client.user.tag}`);
 });
 
-// anti bot 
+// 
+client.on('ready', () => {
+    console.log('hi ')
+    client.user.setPresence({
+        activity: {
+            type: "PLAYING",
+            name: `${prefix}help - MrFox`
+        }, 
+        status: "dnd"
+    })
+});
 
 
 
@@ -286,7 +296,7 @@ __[Invite Bot](https://discord.com/api/oauth2/authorize?client_id=${client.user.
   client.on("ready", () => {
 setInterval(() => {
   client.user.setActivity(
-  `${prefix}help`,
+  ``,
   );
 }, 2000);
 })
