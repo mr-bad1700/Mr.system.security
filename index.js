@@ -47,8 +47,8 @@ client.on('ready', () => {
     console.log('MrFox is ready')
     client.user.setPresence({
         activity: {
-            type: "PLAYING",
-            name: `Type ${prefix}help`
+            type: "TYPE",
+            name: `${prefix}help`
         }, 
         status: "idle"
     })
