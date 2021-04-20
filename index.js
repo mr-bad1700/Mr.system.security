@@ -48,7 +48,7 @@ client.on('ready', () => {
     client.user.setPresence({
         activity: {
             type: "PLAYING",
-            name: `${prefix}help - @MrFox`
+            name: `${prefix}help - https://mrfox.ga/`
         }, 
         status: "idle"
     })
@@ -270,7 +270,8 @@ client.on("message", message => {
   if (message.content.startsWith(prefix + "support")) {
     const embed = new Discord.MessageEmbed()
       .setDescription(`__[Join Server](https://discord.gg/Zhwg47uFun)__ *join to server bot*
-__[Invite Bot](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot)__ *thank you for invite bot* `)
+__[Invite Bot](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot)__ *thank you for invite bot* 
+__[Website](https://mrfox.ga/)__ *website bot dashboard in coming soon*`)
       .setTimestamp()
       .setFooter(`By: ${message.author.tag}`)
       .setAuthor(client.user.username)
@@ -311,12 +312,13 @@ __This is a little prefix__
 `;
     var addserver = `https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot`;
     var SUPPORT = `https://discord.gg/Zhwg47uFun`;
+    var website = `https://mrfox.ga/`;
     var EMBED = new Discord.MessageEmbed()
       .setColor(color)
       .setAuthor(client.user.username, client.user.avatarURL())
       .setDescription(
         `${Dashboard}
-  __**[invite bot ](${addserver})**__ - __**[ Server Support](${SUPPORT})**__ `
+  __**[invite bot](${addserver})**__ - __**[Discord Server](${SUPPORT})**__  - __[**Webstie](${website})**__`
       )
       .setImage("");
     message.channel.send(EMBED);
@@ -344,12 +346,13 @@ __This is a little prefix__
 `;
     var addserver = `https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot`;
     var SUPPORT = `https://discord.gg/Zhwg47uFun`;
+    var website = `https://mrfox.ga/`;
     var EMBED = new Discord.MessageEmbed()
       .setColor(color)
       .setAuthor(client.user.username, client.user.avatarURL())
       .setDescription(
         `${Dashboard}
-  __**[invite bot ](${addserver})**__ - __**[ Server Support](${SUPPORT})**__ `
+  __**[invite bot](${addserver})**__ - __**[Discord Server](${SUPPORT})**__  - __[**Webstie](${website})**__`
       )
       .setImage("");
     message.channel.send(EMBED);
@@ -382,12 +385,13 @@ __This is a little prefix__
 `;
     var addserver = `https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot`;
     var SUPPORT = `https://discord.gg/Zhwg47uFun`;
+    var website = `https://mrfox.ga/`;
     var EMBED = new Discord.MessageEmbed()
-      .setAuthor(client.user.username, client.user.avatarURL())
       .setColor(color)
+      .setAuthor(client.user.username, client.user.avatarURL())
       .setDescription(
         `${Dashboard}
-  __**[invite bot ](${addserver})**__ - __**[ Server Support](${SUPPORT})**__ `
+  __**[invite bot](${addserver})**__ - __**[Discord Server](${SUPPORT})**__  - __[**Webstie](${website})**__`
       )
       .setImage("");
     message.channel.send(EMBED);
@@ -409,12 +413,13 @@ __This is a little prefix__
 `;
     var addserver = `https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot`;
     var SUPPORT = `https://discord.gg/Zhwg47uFun`;
+    var website = `https://mrfox.ga/`;
     var EMBED = new Discord.MessageEmbed()
       .setColor(color)
       .setAuthor(client.user.username, client.user.avatarURL())
       .setDescription(
         `${Dashboard}
-  **[invite bot ](${addserver})** | **[ Server Support](${SUPPORT})** `
+  __**[invite bot](${addserver})**__ - __**[Discord Server](${SUPPORT})**__ - __[**Webstie](${website})**__`
       )
       .setImage("");
     message.channel.send(EMBED);
@@ -436,12 +441,13 @@ __This is a little prefix__
 `;
     var addserver = `https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot`;
     var SUPPORT = `https://discord.gg/Zhwg47uFun`;
+    var website = `https://mrfox.ga/`;
     var EMBED = new Discord.MessageEmbed()
       .setColor(color)
       .setAuthor(client.user.username, client.user.avatarURL())
       .setDescription(
         `${Dashboard}
-  __**[invite bot ](${addserver})**__ - __**[ Server Support](${SUPPORT})**__ `
+  __**[invite bot](${addserver})**__ - __**[Discord Server](${SUPPORT})**__  - __[**Webstie](${website})**__`
       )
       .setImage("");
     message.channel.send(EMBED);
@@ -1864,7 +1870,7 @@ client.on('message', message => {
      > To report a bot send message for :
      > <@596060641740193856>
 __Support__
-     > __[Discord Server](https://discord.gg/Zhwg47uFun)__ - __[Invite Bot](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot)__`)
+     > __[Discord Server](https://discord.gg/Zhwg47uFun)__ - __[Invite Bot](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot)__ - __[Website](https://mrfox.ga/)`)
   message.channel.send(embed);
     }
 }); 
