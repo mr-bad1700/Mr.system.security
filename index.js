@@ -77,8 +77,8 @@ client.on("guildCreate" , bot => {
 const cheerio = require('cheerio');
 
 client.on("ready", () => {
-  console.log("I am ready to give wallpapers!!")
-  client.user.setActivity("Serving 1000+ Anime Wallpapers")
+  console.log("")
+  client.user.setActivity("")
 })
 
 client.on("message", async message => {
