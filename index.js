@@ -40,9 +40,7 @@ const prefix = "m.";
 const cooldown = new Set();
 const cdtime = 7;
 client.login("NzY0NDg3NDE2NzQ4MzEwNTcw.X4G-Yw.0spctXCwJ5FOUsXCV7YLB638vd4");
-client.on("ready", () => {
-  console.log(`${client.user.tag}`);
-});
+
 
 // 
 client.on('ready', () => {
@@ -76,10 +74,7 @@ client.on("guildCreate" , bot => {
 // anime
 const cheerio = require('cheerio');
 
-client.on("ready", () => {
-  console.log("")
-  client.user.setActivity("")
-})
+
 
 client.on("message", async message => {
   if (message.content === "m/anime") {
@@ -293,13 +288,7 @@ __[Invite Bot](https://discord.com/api/oauth2/authorize?client_id=${client.user.
   
   
   
-  client.on("ready", () => {
-setInterval(() => {
-  client.user.setActivity(
-  ``,
-  );
-}, 2000);
-})
+  
 
 
 client.on("warn", (info) => console.log(info));
