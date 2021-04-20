@@ -48,7 +48,7 @@ client.on('ready', () => {
     client.user.setPresence({
         activity: {
             type: "PLAYING",
-            name: ` ${prefix}help`,"Music","Security","Giveaway"
+            name: `Type ${prefix}help`,`Music`,`Security`,`Giveaway`
         }, 
         status: "idle"
     })
