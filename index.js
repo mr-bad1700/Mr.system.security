@@ -47,8 +47,8 @@ client.on('ready', () => {
     console.log('MrFox is ready')
     client.user.setPresence({
         activity: {
-            type: "TYPE",
-            name: `${prefix}help`
+            type: "PLAYING",
+            name: `${prefix}help - @MrFox`
         }, 
         status: "idle"
     })
@@ -316,7 +316,7 @@ __This is a little prefix__
       .setAuthor(client.user.username, client.user.avatarURL())
       .setDescription(
         `${Dashboard}
-  **[invite bot ](${addserver})** | **[ Server Support](${SUPPORT})** `
+  __**[invite bot ](${addserver})**__ - __**[ Server Support](${SUPPORT})**__ `
       )
       .setImage("");
     message.channel.send(EMBED);
@@ -349,7 +349,7 @@ __This is a little prefix__
       .setAuthor(client.user.username, client.user.avatarURL())
       .setDescription(
         `${Dashboard}
-  **[invite bot ](${addserver})** | **[ Server Support](${SUPPORT})** `
+  __**[invite bot ](${addserver})**__ - __**[ Server Support](${SUPPORT})**__ `
       )
       .setImage("");
     message.channel.send(EMBED);
@@ -387,7 +387,7 @@ __This is a little prefix__
       .setColor(color)
       .setDescription(
         `${Dashboard}
-  **[invite bot ](${addserver})** | **[ Server Support](${SUPPORT})** `
+  __**[invite bot ](${addserver})**__ - __**[ Server Support](${SUPPORT})**__ `
       )
       .setImage("");
     message.channel.send(EMBED);
@@ -441,7 +441,7 @@ __This is a little prefix__
       .setAuthor(client.user.username, client.user.avatarURL())
       .setDescription(
         `${Dashboard}
-  **[invite bot ](${addserver})** | **[ Server Support](${SUPPORT})** `
+  __**[invite bot ](${addserver})**__ - __**[ Server Support](${SUPPORT})**__ `
       )
       .setImage("");
     message.channel.send(EMBED);
