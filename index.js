@@ -318,7 +318,7 @@ __This is a little prefix__
       .setAuthor(client.user.username, client.user.avatarURL())
       .setDescription(
         `${Dashboard}
-  __**[invite bot](${addserver})**__ - __**[Discord Server](${SUPPORT})**__  - __[**Webstie](${website})**__`
+  __**[invite bot](${addserver})**__ - __**[Discord Server](${SUPPORT})**__  - __**[Webstie](${website})**__`
       )
       .setImage("");
     message.channel.send(EMBED);
@@ -391,7 +391,7 @@ __This is a little prefix__
       .setAuthor(client.user.username, client.user.avatarURL())
       .setDescription(
         `${Dashboard}
-  __**[invite bot](${addserver})**__ - __**[Discord Server](${SUPPORT})**__  - __[**Webstie](${website})**__`
+  __**[invite bot](${addserver})**__ - __**[Discord Server](${SUPPORT})**__  - __**[Webstie](${website})**__`
       )
       .setImage("");
     message.channel.send(EMBED);
@@ -419,7 +419,7 @@ __This is a little prefix__
       .setAuthor(client.user.username, client.user.avatarURL())
       .setDescription(
         `${Dashboard}
-  __**[invite bot](${addserver})**__ - __**[Discord Server](${SUPPORT})**__ - __[**Webstie](${website})**__`
+  __**[invite bot](${addserver})**__ - __**[Discord Server](${SUPPORT})**__ - __**[Webstie](${website})**__`
       )
       .setImage("");
     message.channel.send(EMBED);
@@ -583,7 +583,7 @@ const ghallat = "";
 const ghallatw = "";
 const logosec = "";
 const warn = "";
-const color = "#404040";
+const color = "#737373";
 
 let anti = JSON.parse(fs.readFileSync("./antigreff.json", "UTF8"));
 let config = JSON.parse(fs.readFileSync("./configg.json", "UTF8"));
