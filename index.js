@@ -202,7 +202,7 @@ const os = require('os')
 
         const embed = new Discord.MessageEmbed()
             .setThumbnail(message.guild.iconURL({dynamic : true}))
-            .setColor('BLACK')
+            .setColor('#303135')
             .setTitle(`${message.guild.name} server Info`)
             .addFields(
                 {
@@ -276,7 +276,7 @@ __[Website](https://mrfox.ga/)__ *website bot dashboard in coming soon*`)
       .setFooter(`By: ${message.author.tag}`)
       .setAuthor(client.user.username)
       .setThumbnail(message.author.avatarURL)
-      .setColor("BLACK");
+      .setColor("#303135");
     message.author.send(embed);
     message.react("✅");
   }
@@ -1277,7 +1277,7 @@ const antibots = JSON.parse(fs.readFileSync('./antibots.json' , 'utf8'))
       .setTitle("**Done Check The Anti bots is on**") 
       .addField("Server", `${message.guild.name}`)
       .addField("Requested By:", `${message.author}`)
-      .setColor("#000001")
+      .setColor("#303135")
       .setFooter(`${client.user.username}`)
       .setTimestamp();
     message.channel.send(embed);
@@ -1303,7 +1303,7 @@ const antibots = JSON.parse(fs.readFileSync('./antibots.json' , 'utf8'))
       .setTitle("**Done Check The Anti bots is off**") 
       .addField("Server", `${message.guild.name}`)
       .addField("Requested By:", `${message.author}`)
-      .setColor("#000001")
+      .setColor("#303135")
       .setFooter(`${client.user.username}`)
       .setTimestamp();
     message.channel.send(embed);
@@ -1472,7 +1472,7 @@ client.on("message", async message => {
       mute = await message.guild.roles.create({
         data: {
           name: "Muted",
-          color: "#808080",
+          color: "#303135",
           permissions: []
         }
       });
@@ -1545,7 +1545,7 @@ client.on("message", prof => {
     }, cdtime * 1000);
     var professor = new Discord.MessageEmbed()
       .setThumbnail(prof.author.avatarURL())
-      .setColor("BLACK")
+      .setColor("#303135")
       .setTitle("Your Info User.")
       .addField("**Your Name**", `<@${prof.author.id}>`)
       .addField("**Your ID**", `${prof.author.id}`)
@@ -1641,7 +1641,7 @@ client.on("message", message => {
       .setThumbnail(
         `https://cdn.discordapp.com/attachments/772758556848029727/802994883378806824/image0.jpg`
       )
-      .setColor("BLACK")
+      .setColor("#303135")
       .setTitle(`Info about ${client.user.username}.`)
       .addField(
         "**My Ping**",
@@ -1681,7 +1681,7 @@ client.on("message", message => {
     var rn = args.slice(1).join(" ");
     let em = new Discord.MessageEmbed()
       .setTitle("Error :")
-      .setColor("808080")
+      .setColor("#303135")
       .setDescription(
         `
   **Usage:**
@@ -1697,7 +1697,7 @@ client.on("message", message => {
     if (!user) return message.channel.send(em);
 
     let ffg = new Discord.MessageEmbed()
-      .setColor("#080808")
+      .setColor("#303135")
       .setTimestamp()
       .setTitle("Warned!")
       .setDescription(
@@ -1861,7 +1861,7 @@ client.on('message', message => {
   if (message.content.startsWith("<@764487416748310570>")) {
    let embed = new Discord.MessageEmbed()
      .setAuthor(client.user.username, client.user.avatarURL())
-     .setColor("#000001")
+     .setColor("#303135")
      .setFooter(message.member.displayName, message.author.displayAvatarURL())
      .setDescription(`
      > Hello sir how to can i help you ?
