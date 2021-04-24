@@ -583,7 +583,7 @@ const ghallat = "";
 const ghallatw = "";
 const logosec = "";
 const warn = "";
-const color = "#737373";
+const color = "#303135";
 
 let anti = JSON.parse(fs.readFileSync("./antigreff.json", "UTF8"));
 let config = JSON.parse(fs.readFileSync("./configg.json", "UTF8"));
