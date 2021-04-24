@@ -352,7 +352,7 @@ __This is a little prefix__
       .setAuthor(client.user.username, client.user.avatarURL())
       .setDescription(
         `${Dashboard}
-  __**[invite bot](${addserver})**__ - __**[Discord Server](${SUPPORT})**__  - __[**Webstie](${website})**__`
+  __**[invite bot](${addserver})**__ - __**[Discord Server](${SUPPORT})**__  - __**[Webstie](${website})**__`
       )
       .setImage("");
     message.channel.send(EMBED);
