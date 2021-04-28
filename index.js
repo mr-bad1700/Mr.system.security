@@ -298,6 +298,38 @@ client.on("error", console.error);
 //////
 
 client.on("message", message => {
+  if (message.content === prefix + "help gif") {
+    let Dashboard = `
+__Gifs Commands__
+> boy - girl - baby
+> neon - sad - smoking
+> animal - anime - cuople - emoji
+__This is a little prefix__
+> [ ${prefix} ]
+`;
+    var addserver = `https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot`;
+    var SUPPORT = `https://discord.gg/Zhwg47uFun`;
+    var website = `https://mrfox.ga/`;
+    var EMBED = new Discord.MessageEmbed()
+      .setColor(color)
+      .setAuthor(client.user.username, client.user.avatarURL())
+      .setDescription(
+        `${Dashboard}
+  __**[invite bot](${addserver})**__ - __**[Discord Server](${SUPPORT})**__  - __**[Webstie](${website})**__`
+      )
+      .setImage("");
+    message.channel.send(EMBED);
+    message.react("✨");
+  }
+});
+
+
+
+
+
+
+
+client.on("message", message => {
   if (message.content === prefix + "help music") {
     let Dashboard = `
 __Music Commands__
@@ -337,9 +369,10 @@ client.on("message", message => {
   if (message.content === prefix + "help") {
     let Dashboard = `
 __Help Commands__
-> __help admin__  to viwe command admin
+> __help mod__  to viwe command admin
 > __help public__  to viwe command all info
 > __help music__ to see command music
+> __help gif__ to see all command gif
 > __help giveaway__ to viwe command giveaways
 __This is a little prefix__
 > [ ${prefix} ]
@@ -366,7 +399,7 @@ __This is a little prefix__
 
 
 client.on("message", message => {
-  if (message.content === prefix + "help admin") {
+  if (message.content === prefix + "help mod") {
     let Dashboard = `
 __Security Commands__ 
 > ${prefix}anti kick - [Number]
@@ -407,7 +440,8 @@ __Public Commands__
 > user info , 
 > server info , 
 > ping , 
-> bot info
+> bot info, 
+> avatar 
 __This is a little prefix__
 > [ ${prefix} ]
 `;
