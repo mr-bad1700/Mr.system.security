@@ -370,9 +370,13 @@ client.on("message", message => {
     let Dashboard = `
 __Help Commands__
 > __help mod__  to viwe command admin
+
 > __help public__  to viwe command all info
+
 > __help music__ to see command music
+
 > __help gif__ to see all command gif
+
 > __help giveaway__ to viwe command giveaways
 __This is a little prefix__
 > [ ${prefix} ]
@@ -1655,16 +1659,6 @@ client.on("message", message => {
 
 //=================================[ ping ]=================================//
 
-client.on("message", message => {
-  if (message.author.bot) return;
-  if (message.content.startsWith(prefix + "ping")) {
-    message.channel.send("pong | :ping_pong: ").then(msg => {
-      var PinG = `${Date.now() - msg.createdTimestamp}`;
-      var ApL = `${Math.round(client.ping)}`;
-      msg.channel.send(`**Time taken: ${PinG} ms.**`);
-    });
-  }
-});
 
 //=================================[ botinfo ]==============================//
 
