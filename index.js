@@ -1895,7 +1895,7 @@ client.on('message', message => {
      > Hello sir how to can i help you ?
      > Please type : __${prefix}help__ to see all commands
  To report a bot send email for :
-     > __**[ Mr.FoxDevelopment@gmail.com ]**__
+     > __|| [ Mr.FoxDevelopment@gmail.com ] ||__
 __Support__
      > __[Discord Server](https://discord.gg/Zhwg47uFun)__ - __[Invite Bot](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot)__ - __[Website](https://mrfox.ga/)__`)
   message.channel.send(embed);
