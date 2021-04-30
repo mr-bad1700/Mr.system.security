@@ -43,7 +43,7 @@ client.login("NzY0NDg3NDE2NzQ4MzEwNTcw.X4G-Yw.0spctXCwJ5FOUsXCV7YLB638vd4");
 
 client.on("ready", () => {
   client.user.setActivity(`${prefix}help - https://mrfox.ga/`, {
-    type: "LISTENING"
+    type: "PLAYING"
   }); ////////////////
   client.user.setStatus("ONLINE");
 });
