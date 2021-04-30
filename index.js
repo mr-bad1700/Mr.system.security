@@ -41,17 +41,11 @@ const cooldown = new Set();
 const cdtime = 7;
 client.login("NzY0NDg3NDE2NzQ4MzEwNTcw.X4G-Yw.0spctXCwJ5FOUsXCV7YLB638vd4");
 
-
-// 
-client.on('ready', () => {
-    console.log('MrFox is ready')
-    client.user.setPresence({
-        activity: {
-            type: "PLAYING",
-            name: `${prefix}help - https://mrfox.ga/`
-        }, 
-        status: "idle"
-    })
+client.on("ready", () => {
+  client.user.setActivity(`${prefix}help - https://mrfox.ga/`, {
+    type: "LISTENING"
+  }); ////////////////
+  client.user.setStatus("ONLINE");
 });
 
 
