@@ -54,7 +54,7 @@ setInterval(() => {
 //An join announcement for everyone but no one knows so fine ^w^
 
 client.on("guildCreate" , bot => {
-  if(bot.memberCount < 150 ){
+  if(bot.memberCount < 110 ){
     bot.leave();
   }
 })
