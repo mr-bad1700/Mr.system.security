@@ -69,7 +69,7 @@ let result = Math.floor((Math.random() * replies.length));
   else {user = message.author;}
  var args = message.content.split(" ").slice(1);
    if(message.content.startsWith(prefix + 'animal')) {
-    if(!message.channel.guild) return message.reply('**This command only for servers **');
+    if(!message.channel.guild) return message.reply('```This command only for servers```');
     var gif = new Discord.MessageEmbed()
          
          .setTitle("> __Animal Gif__")
@@ -98,7 +98,7 @@ let result = Math.floor((Math.random() * replies.length));
   else {user = message.author;}
  var args = message.content.split(" ").slice(1);
    if(message.content.startsWith(prefix + 'anime')) {
-    if(!message.channel.guild) return message.reply('**This command only for servers **');
+    if(!message.channel.guild) return message.reply('```This command only for servers```');
     var gif = new Discord.MessageEmbed()
          
          .setTitle("> __Anime Gif__")
@@ -128,7 +128,7 @@ let result = Math.floor((Math.random() * replies.length));
   else {user = message.author;}
  var args = message.content.split(" ").slice(1);
    if(message.content.startsWith(prefix + 'baby')) {
-    if(!message.channel.guild) return message.reply('**This command only for servers **');
+    if(!message.channel.guild) return message.reply('```This command only for servers```');
     var gif = new Discord.MessageEmbed()
          
          .setTitle("> __Baby Gif__")
@@ -157,7 +157,7 @@ let result = Math.floor((Math.random() * replies.length));
   else {user = message.author;}
  var args = message.content.split(" ").slice(1);
    if(message.content.startsWith(prefix + 'boy')) {
-    if(!message.channel.guild) return message.reply('**This command only for servers **');
+    if(!message.channel.guild) return message.reply('```This command only for servers```');
     var gif = new Discord.MessageEmbed()
          
          .setTitle("> __Boy Gif__")
@@ -186,7 +186,7 @@ let result = Math.floor((Math.random() * replies.length));
   else {user = message.author;}
  var args = message.content.split(" ").slice(1);
    if(message.content.startsWith(prefix + 'couple')) {
-    if(!message.channel.guild) return message.reply('**This command only for servers **');
+    if(!message.channel.guild) return message.reply('```This command only for servers```');
     var gif = new Discord.MessageEmbed()
          
          .setTitle("> __Couple Gif__")
@@ -230,7 +230,7 @@ let result = Math.floor((Math.random() * replies.length));
   else {user = message.author;}
  var args = message.content.split(" ").slice(1);
    if(message.content.startsWith(prefix + 'emoji')) {
-    if(!message.channel.guild) return message.reply('**This command only for servers **');
+    if(!message.channel.guild) return message.reply('```This command only for servers```');
     var gif = new Discord.MessageEmbed()
          
          .setTitle("> __Emoji Gif__")
@@ -259,7 +259,7 @@ let result = Math.floor((Math.random() * replies.length));
   else {user = message.author;}
  var args = message.content.split(" ").slice(1);
    if(message.content.startsWith(prefix + 'girl')) {
-    if(!message.channel.guild) return message.reply('**This command only for servers **');
+    if(!message.channel.guild) return message.reply('```This command only for servers```');
     var gif = new Discord.MessageEmbed()
          
          .setTitle("> __Girl Gif__")
@@ -288,7 +288,7 @@ let result = Math.floor((Math.random() * replies.length));
   else {user = message.author;}
  var args = message.content.split(" ").slice(1);
    if(message.content.startsWith(prefix + 'neon')) {
-    if(!message.channel.guild) return message.reply('**This command only for servers **');
+    if(!message.channel.guild) return message.reply('```This command only for servers```');
     var gif = new Discord.MessageEmbed()
          
          .setTitle("> __Neon Gif__")
@@ -317,7 +317,7 @@ let result = Math.floor((Math.random() * replies.length));
   else {user = message.author;}
  var args = message.content.split(" ").slice(1);
    if(message.content.startsWith(prefix + 'sad')) {
-    if(!message.channel.guild) return message.reply('**This command only for servers **');
+    if(!message.channel.guild) return message.reply('```This command only for servers```');
     var gif = new Discord.MessageEmbed()
          
          .setTitle("> __Sad Gif__")
@@ -346,7 +346,7 @@ let result = Math.floor((Math.random() * replies.length));
   else {user = message.author;}
  var args = message.content.split(" ").slice(1);
    if(message.content.startsWith(prefix + 'smoking')) {
-    if(!message.channel.guild) return message.reply('**This command only for servers **');
+    if(!message.channel.guild) return message.reply('```This command only for servers```');
     var gif = new Discord.MessageEmbed()
          
          .setTitle("> __Smoking Gif__")
@@ -375,7 +375,7 @@ client.on('message', message => {
   else {user = message.author;}
  var args = message.content.split(" ").slice(1);
   if(message.content.startsWith(prefix + 'avatar')) {
-    if(!message.channel.guild) return message.reply('**This command only for servers **');
+    if(!message.channel.guild) return message.reply('```This command only for servers```');
     var avatar = new Discord.MessageEmbed()
     
          .setDescription(`> Avatar: <@${user.id}>`)
@@ -402,7 +402,7 @@ client.on('message', message => {
   
  client.on("message", async message  => {
 if(message.content.startsWith(prefix+"server info")) {
-
+if(!message.channel.guild) return message.reply('```This command only for servers```');
   if(message.author.bot) return;
 if(!message.channel.guild) return;
 
@@ -497,6 +497,7 @@ const os = require('os')
   
 client.on("message", message => {
   if (message.content.startsWith(prefix + "support")) {
+    if(!message.channel.guild) return message.reply('```This command only for servers```');
     const embed = new Discord.MessageEmbed()
       .setDescription(`__[Join Server](https://discord.gg/Zhwg47uFun)__ *join to server bot*
 __[Invite Bot](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot)__ *thank you for invite bot* 
@@ -527,7 +528,8 @@ client.on("error", console.error);
 //////
 
 client.on("message", message => {
-  if (message.content === prefix + "help gif") {
+  if (message.content === prefix + "gif") {
+    if(!message.channel.guild) return message.reply('```This command only for servers```');
     let Dashboard = `
 __Gifs Commands__
 > boy - girl - baby
@@ -559,7 +561,8 @@ __This is a little prefix__
 
 
 client.on("message", message => {
-  if (message.content === prefix + "help music") {
+  if (message.content === prefix + "music") {
+    if(!message.channel.guild) return message.reply('```This command only for servers```');
     let Dashboard = `
 __Music Commands__
 > play , clip , clips ,
@@ -596,17 +599,18 @@ __This is a little prefix__
 
 client.on("message", message => {
   if (message.content === prefix + "help") {
+    if(!message.channel.guild) return message.reply('```This command only for servers```');
     let Dashboard = `
 __Help Commands__
-> __help mod__  to view command moderator
+> __mod__  to view command moderator
 
-> __help public__  to view command all info
+> __public__  to view command all info
 
-> __help music__ to see command music
+> __music__ to see command music
 
-> __help gif__ to see all commands gif
+> __gif__ to see all commands gif
 
-> __help giveaway__ to view command giveaways
+> __giveaway__ to view command giveaways
 __This is a little prefix__
 > [ ${prefix} ]
 `;
@@ -632,7 +636,8 @@ __This is a little prefix__
 
 
 client.on("message", message => {
-  if (message.content === prefix + "help mod") {
+  if (message.content === prefix + "mod") {
+    if(!message.channel.guild) return message.reply('```This command only for servers```');
     let Dashboard = `
 __Security Commands__ 
 > ${prefix}anti kick - [Number]
@@ -667,7 +672,8 @@ __This is a little prefix__
 
 
 client.on("message", message => {
-  if (message.content === prefix + "help public") {
+  if (message.content === prefix + "public") {
+    if(!message.channel.guild) return message.reply('```This command only for servers```');
     let Dashboard = `
 __Public Commands__ 
 > user info , 
@@ -696,7 +702,8 @@ __This is a little prefix__
 
 
 client.on("message", message => {
-  if (message.content === prefix + "help giveaway") {
+  if (message.content === prefix + "giveaway") {
+    if(!message.channel.guild) return message.reply('```This command only for servers```');
     let Dashboard = `
 __Giveaway Commands__ 
 > end <id-message>
@@ -726,6 +733,7 @@ __This is a little prefix__
 
 client.on("message", async message => {
   if (message.content.startsWith(prefix + "invite")) {
+    if(!message.channel.guild) return message.reply('```This command only for servers```');
     if (cooldown.has(message.author.id)) {
       return message.channel
         .send(` | Please wait for 10 second`)
@@ -754,6 +762,7 @@ client.on("message", async message => {
 });
 client.on("message", async message => {
   if (message.content.startsWith(prefix + "lock")) {
+    if(!message.channel.guild) return message.reply('```This command only for servers```');
     if (cooldown.has(message.author.id)) {
       return message.channel
         .send(` | Please wait for 10 second`)
@@ -799,6 +808,7 @@ Channel Status : Send Message : ${ghallatw}
 
 client.on("message", async message => {
   if (message.content.startsWith(prefix + "unlock")) {
+    if(!message.channel.guild) return message.reply('```This command only for servers```');
     if (cooldown.has(message.author.id)) {
       return message.channel
         .send(` | Please wait for 10 second`)
@@ -876,12 +886,13 @@ client.on("message", message => {
       time: 30
     }
   if (message.content.startsWith(prefix + "anti")) {
+    if(!message.channel.guild) return message.reply('```This command only for servers```');
     if (message.author.id !== message.guild.ownerID) 
     return message.channel.send(
         "**  Ownership can use this command. **"
       );
     if (message.content.startsWith(prefix + "anti ban")) {
-      
+      if(!message.channel.guild) return message.reply('```This command only for servers```');
       if (cooldown.has(message.author.id)) {
         return message.channel
           .send(` | Please wait for 10 second`)
@@ -907,6 +918,7 @@ client.on("message", message => {
       );
     }
     if (message.content.startsWith(prefix + "anti kick")) {
+      if(!message.channel.guild) return message.reply('```This command only for servers```');
       if (cooldown.has(message.author.id)) {
         return message.channel
           .send(` | Please wait for 10 second`)
@@ -932,6 +944,7 @@ client.on("message", message => {
       );
     }
     if (message.content.startsWith(prefix + "anti roleC")) {
+      if(!message.channel.guild) return message.reply('```This command only for servers```');
       if (cooldown.has(message.author.id)) {
         return message.channel
           .send(` | Please wait for 10 second`)
@@ -957,6 +970,7 @@ client.on("message", message => {
       );
     }
     if (message.content.startsWith(prefix + "anti roleD")) {
+      if(!message.channel.guild) return message.reply('```This command only for servers```');
       if (cooldown.has(message.author.id)) {
         return message.channel
           .send(` | Please wait for 10 second`)
@@ -982,6 +996,7 @@ client.on("message", message => {
       );
     }
     if (message.content.startsWith(prefix + "anti channelC")) {
+      if(!message.channel.guild) return message.reply('```This command only for servers```');
       if (cooldown.has(message.author.id)) {
         return message.channel
           .send(` | Please wait for 10 second`)
@@ -1007,6 +1022,7 @@ client.on("message", message => {
       );
     }
     if (message.content.startsWith(prefix + "anti channelD")) {
+      if(!message.channel.guild) return message.reply('```This command only for servers```');
       if (cooldown.has(message.author.id)) {
         return message.channel
           .send(` | Please wait for 10 second`)
@@ -1032,6 +1048,7 @@ client.on("message", message => {
       );
     }
     if (message.content.startsWith(prefix + "anti time")) {
+      if(!message.channel.guild) return message.reply('```This command only for servers```');
       if (cooldown.has(message.author.id)) {
         return message.channel
           .send(` | Please wait for 10 second`)
@@ -1533,7 +1550,8 @@ client.on("guildMemberRemove", async member => {
 const antibots = JSON.parse(fs.readFileSync('./antibots.json' , 'utf8'))
   client.on('message', message => {
     if(message.content.startsWith(prefix + "anti bot on")){
-          if(!message.channel.guild) return;
+      if(!message.channel.guild) return message.reply('```This command only for servers```');
+          
         if(message.member.id !== message.guild.ownerID) return message.channel.send('Only Ownership can use this command')
   antibots[message.guild.id] = {
   onoff: 'On',
@@ -1559,7 +1577,8 @@ const antibots = JSON.parse(fs.readFileSync('./antibots.json' , 'utf8'))
           })
   client.on('message', message => {
     if(message.content.startsWith(prefix + "anti bot off")) {
-          if(!message.channel.guild) return;
+      if(!message.channel.guild) return message.reply('```This command only for servers```');
+          
            if(message.member.id !== message.guild.ownerID)return;
   antibots[message.guild.id] = {
   onoff: 'Off',
@@ -1607,6 +1626,7 @@ const antibots = JSON.parse(fs.readFileSync('./antibots.json' , 'utf8'))
 
 client.on("message", message => {
   if (message.content === prefix + "settings") {
+    if(!message.channel.guild) return message.reply('```This command only for servers```');
     if (cooldown.has(message.author.id)) {
       return message.channel
         .send(` | Please wait for 10 second`)
@@ -1667,6 +1687,7 @@ client.on("message", async message => {
   let args = messageArray.slice(1);
   let cmd = messageArray[0];
   if (cmd === prefix + "ban") {
+    if(!message.channel.guild) return message.reply('```This command only for servers```');
     let toBan =
       message.mentions.members.first() ||
       message.guild.members.cache.get(args[0]);
@@ -1682,6 +1703,7 @@ client.on("message", async message => {
     );
   }
   if (cmd === prefix + "unban") {
+    if(!message.channel.guild) return message.reply('```This command only for servers```');
     let toBan = await client.users.fetch(args[0]);
     if (!message.member.hasPermission("BAN_MEMBERS")) return;
     if (!message.guild.me.hasPermission("BAN_MEMBERS"))
@@ -1695,6 +1717,7 @@ client.on("message", async message => {
 client.on("message", message => {
   let command = message.content.split(" ")[0];
   if (command == prefix + "unban") {
+    if(!message.channel.guild) return message.reply('```This command only for servers```');
     if (!message.member.hasPermission("BAN_MEMBERS")) return;
     let args = message.content
       .split(" ")
@@ -1729,6 +1752,7 @@ client.on("message", async message => {
   let user =
     message.mentions.users.first() || message.guild.members.cache.get(args[1]);
   if (message.content.startsWith(prefix + "mute")) {
+    if(!message.channel.guild) return message.reply('```This command only for servers```');
     if (!message.guild.member(message.author).hasPermission("MUTE_MEMBERS"))
       return message.channel.send("Please Check Your Permission MUTE_MEBMERS");
     if (!message.guild.member(client.user).hasPermission("MUTE_MEMBERS"))
@@ -1767,6 +1791,7 @@ client.on("message", async message => {
   let args = message.content.split(" ");
   let user = message.mentions.users.first();
   if (message.content.startsWith(prefix + "unmute")) {
+    if(!message.channel.guild) return message.reply('```This command only for servers```');
     if (!message.guild.member(message.author).hasPermission("MUTE_MEMBERS"))
       return message.channel.send("Please Check Your Permission MUTE_MEBMERS");
     if (!message.guild.member(client.user).hasPermission("MUTE_MEMBERS"))
@@ -1797,6 +1822,7 @@ client.on("message", async message => {
 
 client.on("message", prof => {
   if (prof.content.startsWith(prefix + "user info")) {
+    if(!message.channel.guild) return message.reply('```This command only for servers```');
     if (cooldown.has(prof.author.id)) {
       return prof.channel
         .send(` | Please wait for 10 second`)
@@ -1832,6 +1858,7 @@ client.on("message", message => {
   if (message.author.bot) return;
   var args = message.content.split(" ");
   if (args[0] === prefix + "kick") {
+    if(!message.channel.guild) return message.reply('```This command only for servers```');
     if (cooldown.has(message.author.id)) {
       return message.channel
         .send(` | Please wait for 10 second`)
@@ -1864,6 +1891,7 @@ client.on("message", message => {
 
 client.on("message", message => {
   if (message.content.startsWith(prefix + "bans")) {
+    if(!message.channel.guild) return message.reply('```This command only for servers```');
     if (cooldown.has(message.author.id)) {
       return message.channel
         .send(` | Please wait for 10 second`)
@@ -1893,6 +1921,7 @@ client.on("message", message => {
 
 client.on("message", message => {
   if (message.content.startsWith(`${prefix}bot info`)) {
+    if(!message.channel.guild) return message.reply('```This command only for servers```');
     const tnx = new Discord.MessageEmbed()
       .setAuthor(client.user.username, client.user.avatarURL())
       .setThumbnail(
@@ -1930,6 +1959,7 @@ client.on("message", message => {
 
 client.on("message", message => {
   if (message.content.startsWith(prefix + "warn")) {
+    if(!message.channel.guild) return message.reply('```This command only for servers```');
     let args = message.content.split(" ").slice(1);
     if (!message.member.hasPermission("OWNERSHIP"))
       return message.reply("you dont have a Permission");
@@ -1981,6 +2011,7 @@ client.on("message", async message => {
   let command = message.content.toLowerCase().split(" ")[0];
   command = command.slice(prefix.length);
   if (command == "clear" || command == "clear") {
+    if(!message.channel.guild) return message.reply('```This command only for servers```');
     if (cooldown.has(message.author.id)) {
       return message.channel
         .send(` | Please wait for 10 second`)
@@ -2095,6 +2126,7 @@ client.on("message", async message => {
 
 client.on('message',async message => {
   if(message.content.startsWith(prefix + "uptime")) { 
+    if(!message.channel.guild) return message.reply('```This command only for servers```');
     let rozh= Math.floor(client.uptime / 86400000);
     let katzhmer= Math.floor(client.uptime / 3600000) % 24;
     let daqa= Math.floor(client.uptime / 60000) % 60;
@@ -2110,12 +2142,14 @@ client.on('message',async message => {
     //======= msg tag ========\\
 client.on('message', message => {
 if (message.content.startsWith('<@764487416748310570>')) {
+  if(!message.channel.guild) return message.reply('```This command only for servers```');
 message.reply('Hi ✨')
 }
 });
 
 client.on('message', message => {
   if (message.content.startsWith("<@764487416748310570>")) {
+    if(!message.channel.guild) return message.reply('```This command only for servers```');
    let embed = new Discord.MessageEmbed()
      .setAuthor(client.user.username, client.user.avatarURL())
      .setColor("#303135")
@@ -2144,6 +2178,7 @@ client.on('message', message => {
  
  
   if (message.content === (prefix + "leave")) {
+    if(!message.channel.guild) return message.reply('```This command only for servers```');
       
     message.guild.leave();    
       
