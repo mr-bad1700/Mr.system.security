@@ -62,19 +62,23 @@ client.on("guildCreate" , bot => {
 
 
 client.on('message', message => {
-    if (message.content.startsWith(prefix + "avatar")) {
-if(!message.channel.guild) return;
-        var mentionned = message.mentions.users.first();
-    var client;
-      if(mentionned){
-          var client = mentionned; } else {
-          var client = message.author;
-      }
-        const embed = new Discord.MessageEmbed()
-                .addField('Requested by:', "<@" + message.author.id + ">")
-        .setColor(color)
-        .setImage(`${client.avatarURL()}`)
-      message.channel.send(embed);
+  const codework = message.mentions.users.first()  
+  let user;
+  if (message.mentions.users.first())  {user = message.mentions.users.first();}
+  else {user = message.author;}
+ var args = message.content.split(" ").slice(1);
+  if(message.content.startsWith(prefix + 'avatar')) {
+    if(!message.channel.guild) return message.reply('**This command only for servers **');
+    var avatar = new Discord.MessageEmbed()
+    
+         .setDescription(`> Avatar: <@${user.id}>`)
+         .setColor(color)
+         .setFooter(`Request by: ${message.author.username}#${message.author.discriminator}`, message.member.user.displayAvatarURL({ dynamic: true }))
+         .setAuthor(client.user.username, client.user.avatarURL())
+         .setImage(user.displayAvatarURL({ dynamic: true }))
+          
+      message.channel.send(avatar);
+ 
     }
 });
 
