@@ -500,7 +500,7 @@ client.on("message", message => {
     if(!message.channel.guild) return message.reply('```This command only for servers```');
     const embed = new Discord.MessageEmbed()
       .setDescription(`__[Join Server](https://discord.gg/26pM9JYU56)__ *join to server bot*
-__[Invite Bot](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot)__ *thank you for invite bot* 
+__[Invite Bot](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=5271285182&scope=bot)__ *thank you for invite bot* 
 __[Website](https://mrfox.ga/)__ *website bot dashboard in coming soon*`)
       .setTimestamp()
       .setFooter(`By: ${message.author.tag}`)
@@ -538,7 +538,7 @@ __Gifs Commands__
 __This is a little prefix__
 > [ ${prefix} ]
 `;
-    var addserver = `https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot`;
+    var addserver = `https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=5271285182&scope=bot`;
     var SUPPORT = `https://discord.gg/26pM9JYU56`;
     var website = `https://mrfox.ga/`;
     var EMBED = new Discord.MessageEmbed()
@@ -574,7 +574,7 @@ __Music Commands__
 __This is a little prefix__
 > [ ${prefix} ]
 `;
-    var addserver = `https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot`;
+    var addserver = `https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=5271285182&scope=bot`;
     var SUPPORT = `https://discord.gg/26pM9JYU56`;
     var website = `https://mrfox.ga/`;
     var EMBED = new Discord.MessageEmbed()
@@ -614,7 +614,7 @@ __Help Commands__
 __This is a little prefix__
 > [ ${prefix} ]
 `;
-    var addserver = `https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot`;
+    var addserver = `https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=5271285182&scope=bot`;
     var SUPPORT = `https://discord.gg/26pM9JYU56`;
     var website = `https://mrfox.ga/`;
     var EMBED = new Discord.MessageEmbed()
@@ -654,7 +654,7 @@ __Moderation Commands__
 __This is a little prefix__
 > [ ${prefix} ]
 `;
-    var addserver = `https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot`;
+    var addserver = `https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=5271285182&scope=bot`;
     var SUPPORT = `https://discord.gg/26pM9JYU56`;
     var website = `https://mrfox.ga/`;
     var EMBED = new Discord.MessageEmbed()
@@ -684,7 +684,7 @@ __Public Commands__
 __This is a little prefix__
 > [ ${prefix} ]
 `;
-    var addserver = `https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot`;
+    var addserver = `https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=5271285182&scope=bot`;
     var SUPPORT = `https://discord.gg/26pM9JYU56`;
     var website = `https://mrfox.ga/`;
     var EMBED = new Discord.MessageEmbed()
@@ -713,7 +713,7 @@ __Giveaway Commands__
 __This is a little prefix__
 > [ ${prefix} ]
 `;
-    var addserver = `https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot`;
+    var addserver = `https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=5271285182&scope=bot`;
     var SUPPORT = `https://discord.gg/26pM9JYU56`;
     var website = `https://mrfox.ga/`;
     var EMBED = new Discord.MessageEmbed()
@@ -754,7 +754,7 @@ client.on("message", async message => {
       .setTitle("" + 
                 "click here | thank you for invite me ⚡" + `${client.user.username}`)
       .setURL(
-        `https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot`
+        `https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=5271285182&scope=bot`
       );
     message.author.send(invite);
     message.react("✨");
@@ -790,7 +790,7 @@ client.on("message", async message => {
     const lock = new Discord.MessageEmbed()
       .setTitle("" + "Click Here To Add : " + `${client.user.username}`)
       .setURL(
-        `https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot`
+        `https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=5271285182&scope=bot`
       )
       .setColor(color)
       .setDescription(
@@ -836,7 +836,7 @@ client.on("message", async message => {
     const unlock = new Discord.MessageEmbed()
       .setTitle("" + "Click Here To Add : " + `${client.user.username}`)
       .setURL(
-        `https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot`
+        `https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=5271285182&scope=bot`
       )
       .setColor(color)
       .setDescription(
@@ -2155,7 +2155,7 @@ client.on('message', message => {
  To report bot send email for :
      > __|| [ Mr.FoxDevelopment@gmail.com ] ||__
 __Support__
-     > __[Discord Server](https://discord.gg/Zhwg47uFun)__ - __[Invite Bot](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot)__ - __[Website](https://mrfox.ga/)__`)
+     > __[Discord Server](https://discord.gg/26pM9JYU56)__ - __[Invite Bot](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=5271285182&scope=bot)__ - __[Website](https://mrfox.ga/)__`)
    message.reply('Hi ✨')
   message.channel.send(embed);
     }
