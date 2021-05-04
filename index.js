@@ -499,7 +499,7 @@ client.on("message", message => {
   if (message.content.startsWith(prefix + "support")) {
     if(!message.channel.guild) return message.reply('```This command only for servers```');
     const embed = new Discord.MessageEmbed()
-      .setDescription(`__[Join Server](https://discord.gg/Zhwg47uFun)__ *join to server bot*
+      .setDescription(`__[Join Server](https://discord.gg/26pM9JYU56)__ *join to server bot*
 __[Invite Bot](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot)__ *thank you for invite bot* 
 __[Website](https://mrfox.ga/)__ *website bot dashboard in coming soon*`)
       .setTimestamp()
@@ -539,7 +539,7 @@ __This is a little prefix__
 > [ ${prefix} ]
 `;
     var addserver = `https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot`;
-    var SUPPORT = `https://discord.gg/Zhwg47uFun`;
+    var SUPPORT = `https://discord.gg/26pM9JYU56`;
     var website = `https://mrfox.ga/`;
     var EMBED = new Discord.MessageEmbed()
       .setColor(color)
@@ -575,7 +575,7 @@ __This is a little prefix__
 > [ ${prefix} ]
 `;
     var addserver = `https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot`;
-    var SUPPORT = `https://discord.gg/Zhwg47uFun`;
+    var SUPPORT = `https://discord.gg/26pM9JYU56`;
     var website = `https://mrfox.ga/`;
     var EMBED = new Discord.MessageEmbed()
       .setColor(color)
@@ -615,7 +615,7 @@ __This is a little prefix__
 > [ ${prefix} ]
 `;
     var addserver = `https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot`;
-    var SUPPORT = `https://discord.gg/Zhwg47uFun`;
+    var SUPPORT = `https://discord.gg/26pM9JYU56`;
     var website = `https://mrfox.ga/`;
     var EMBED = new Discord.MessageEmbed()
       .setColor(color)
@@ -655,7 +655,7 @@ __This is a little prefix__
 > [ ${prefix} ]
 `;
     var addserver = `https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot`;
-    var SUPPORT = `https://discord.gg/Zhwg47uFun`;
+    var SUPPORT = `https://discord.gg/26pM9JYU56`;
     var website = `https://mrfox.ga/`;
     var EMBED = new Discord.MessageEmbed()
       .setColor(color)
@@ -685,7 +685,7 @@ __This is a little prefix__
 > [ ${prefix} ]
 `;
     var addserver = `https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot`;
-    var SUPPORT = `https://discord.gg/Zhwg47uFun`;
+    var SUPPORT = `https://discord.gg/26pM9JYU56`;
     var website = `https://mrfox.ga/`;
     var EMBED = new Discord.MessageEmbed()
       .setColor(color)
@@ -714,7 +714,7 @@ __This is a little prefix__
 > [ ${prefix} ]
 `;
     var addserver = `https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot`;
-    var SUPPORT = `https://discord.gg/Zhwg47uFun`;
+    var SUPPORT = `https://discord.gg/26pM9JYU56`;
     var website = `https://mrfox.ga/`;
     var EMBED = new Discord.MessageEmbed()
       .setColor(color)
