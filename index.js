@@ -199,6 +199,35 @@ let result = Math.floor((Math.random() * replies.length));
 });
 
 
+client.on('message', message => {
+  const codework = message.mentions.users.first()  
+  let user;
+  
+   let replies = ["https://media.discordapp.net/attachments/762954136744099842/799811562427777063/Enes_Acar_15.gif", "https://media.discordapp.net/attachments/762954136744099842/800835842422734898/4270_Panda.gif", "https://media.discordapp.net/attachments/699520919328129055/803613686656401418/Haraketli_Emoji_261.gif","https://cdn.discordapp.com/attachments/828192671272009799/838953921174700032/image0.gif","https://cdn.discordapp.com/attachments/828192671272009799/838953910932209674/image0.gif","https://cdn.discordapp.com/attachments/828192671272009799/838953897607037038/image0.gif","https://cdn.discordapp.com/attachments/828192671272009799/838953886768693288/image0.gif","https://cdn.discordapp.com/attachments/828192671272009799/838953874038718494/image0.gif","https://cdn.discordapp.com/attachments/828192671272009799/838953867168972860/image0.gif","https://cdn.discordapp.com/attachments/828192671272009799/838953857240924160/image0.gif","https://cdn.discordapp.com/attachments/828192671272009799/838953847396368394/image0.gif","https://cdn.discordapp.com/attachments/828192671272009799/838953838429077514/image0.gif","https://cdn.discordapp.com/attachments/828192671272009799/838953822848024586/image0.gif","https://cdn.discordapp.com/attachments/828192671272009799/838953813805236224/image0.gif","https://cdn.discordapp.com/attachments/828192671272009799/838953805814431754/image0.gif","https://cdn.discordapp.com/attachments/828192671272009799/838953798826852372/image0.gif","https://cdn.discordapp.com/attachments/828192671272009799/838953788168470598/image0.gif","https://cdn.discordapp.com/attachments/828192671272009799/838953774353219614/image0.gif"];
+
+let result = Math.floor((Math.random() * replies.length));
+
+  if (message.mentions.users.first())  {user = message.mentions.users.first();}
+  else {user = message.author;}
+ var args = message.content.split(" ").slice(1);
+   if(message.content.startsWith(prefix + 'emoji')) {
+    if(!message.channel.guild) return message.reply('**This command only for servers **');
+    var gif = new Discord.MessageEmbed()
+         
+         .setTitle("> __Emoji Gif__")
+         .setURL(`https://mrfox.ga/`)
+         .setDescription(`> tag: <@${user.id}>`)
+         .setColor(color)
+         .setFooter(`Request by: ${message.author.username}#${message.author.discriminator}`, message.member.user.displayAvatarURL({ dynamic: true }))
+         .setAuthor(client.user.username, client.user.avatarURL())
+         .setImage(replies[result])
+          
+      message.channel.send(gif);
+ 
+    }
+});
+
+
 
 
 //An join announcement for everyone but no one knows so fine ^w^
