@@ -2140,12 +2140,7 @@ client.on('message',async message => {
 
 
     //======= msg tag ========\\
-client.on('message', message => {
-if (message.content.startsWith('<@764487416748310570>')) {
-  if(!message.channel.guild) return message.reply('```This command only for servers```');
-message.reply('Hi ✨')
-}
-});
+
 
 client.on('message', message => {
   if (message.content.startsWith("<@764487416748310570>")) {
@@ -2161,6 +2156,7 @@ client.on('message', message => {
      > __|| [ Mr.FoxDevelopment@gmail.com ] ||__
 __Support__
      > __[Discord Server](https://discord.gg/Zhwg47uFun)__ - __[Invite Bot](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot)__ - __[Website](https://mrfox.ga/)__`)
+   message.reply('Hi ✨')
   message.channel.send(embed);
     }
 }); 
