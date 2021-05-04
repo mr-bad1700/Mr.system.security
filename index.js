@@ -598,15 +598,15 @@ client.on("message", message => {
   if (message.content === prefix + "help") {
     let Dashboard = `
 __Help Commands__
-> __help mod__  to viwe command moderator
+> __help mod__  to view command moderator
 
-> __help public__  to viwe command all info
+> __help public__  to view command all info
 
 > __help music__ to see command music
 
 > __help gif__ to see all commands gif
 
-> __help giveaway__ to viwe command giveaways
+> __help giveaway__ to view command giveaways
 __This is a little prefix__
 > [ ${prefix} ]
 `;
