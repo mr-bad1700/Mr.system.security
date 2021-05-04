@@ -261,6 +261,35 @@ let result = Math.floor((Math.random() * replies.length));
 });
 
 
+client.on('message', message => {
+  const codework = message.mentions.users.first()  
+  let user;
+  
+   let replies = ["https://cdn.discordapp.com/attachments/764927608013193276/764933832142749736/image0.gif", "https://cdn.discordapp.com/attachments/764927608013193276/768164227377791066/image0.gif", "https://cdn.discordapp.com/attachments/764927608013193276/788707324503392286/image0.gif", "https://cdn.discordapp.com/attachments/764927608013193276/812066790564823100/image0.gif", "https://cdn.discordapp.com/attachments/764927608013193276/779428418605023252/image0.gif", "https://cdn.discordapp.com/attachments/764927608013193276/780111245634043944/image0.gif", "https://cdn.discordapp.com/attachments/764927608013193276/793756092261072936/image0.gif"];
+
+let result = Math.floor((Math.random() * replies.length));
+
+  if (message.mentions.users.first())  {user = message.mentions.users.first();}
+  else {user = message.author;}
+ var args = message.content.split(" ").slice(1);
+   if(message.content.startsWith(prefix + 'neon')) {
+    if(!message.channel.guild) return message.reply('**This command only for servers **');
+    var gif = new Discord.MessageEmbed()
+         
+         .setTitle("> __Neon Gif__")
+         .setURL(`https://mrfox.ga/`)
+         .setDescription(`> tag: <@${user.id}>`)
+         .setColor(color)
+         .setFooter(`Request by: ${message.author.username}#${message.author.discriminator}`, message.member.user.displayAvatarURL({ dynamic: true }))
+         .setAuthor(client.user.username, client.user.avatarURL())
+         .setImage(replies[result])
+          
+      message.channel.send(gif);
+ 
+    }
+});
+
+
 
 
 
