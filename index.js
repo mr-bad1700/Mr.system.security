@@ -39,7 +39,7 @@ const cmd = require("node-cmd");
 const prefix = "m.";
 const cooldown = new Set();
 const cdtime = 7;
-client.login("ODIwODczNjgxOTQxMTY4MTU4.YE7gMA.OMOkxLic8bAo314S68Ud_TMT6Oc");
+client.login("ODIwODczNjgxOTQxMTY4MTU4.YE7gMA.JO1XGG_ZFJsvO66FDW1mPL7W8OU");
 
 client.on("ready", () => {
 setInterval(() => {
