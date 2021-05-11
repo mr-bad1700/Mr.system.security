@@ -612,7 +612,7 @@ client.on("message", message => {
   if (message.content === prefix + "music") {
     if(!message.channel.guild) return message.reply('```This command only for servers```');
     let Dashboard = `
-__Music Commands__
+__Music Commands__ \`
 > help - To show all commands
 > leave - Leave The Voice Channel!
 > loop - Toggle music loop
@@ -629,7 +629,7 @@ __Music Commands__
 > skip - To skip the current music
 > skipto - Skip to the selected queue number
 > stop - To stop the music and clearing the queue
-> volume - To change the server song queue volume
+> volume - To change the server song queue volume\`
 __This is a little prefix__
 > [ ${prefix} ]
 `;
