@@ -612,24 +612,23 @@ client.on("message", message => {
   if (message.content === prefix + "music") {
     if(!message.channel.guild) return message.reply('```This command only for servers```');
     let Dashboard = `
-__Music Commands__ \`
-> help - To show all commands
-> leave - Leave The Voice Channel!
-> loop - Toggle music loop
-> lyrics - Get lyrics for the currently playing song
-> nowplaying - To show the music which is currently playing in this server
-> pause - To pause the current music in the server
-> play - To play songs 
-> playlist - To play songs 
-> queue - To show the server songs queue
-> remove - Remove song from the queue
-> resume - To resume the paused music
-> search - To search songs 
-> shuffle - Shuffle queue
-> skip - To skip the current music
-> skipto - Skip to the selected queue number
-> stop - To stop the music and clearing the queue
-> volume - To change the server song queue volume\`
+__Music Commands__ 
+> leave - \`Leave The Voice Channel!\`
+> loop - \`Toggle music loop\`
+> lyrics - \`Get lyrics for the currently playing song\`
+> nowplaying - \`To show the music which is currently playing in this server\`
+> pause - \`To pause the current music in the server\`
+> play - \`To play songs\` 
+> playlist - \`To play songs\` 
+> queue - \`To show the server songs queue\`
+> remove - \`Remove song from the queue\`
+> resume - \`To resume the paused music\`
+> search - \`To search songs\` 
+> shuffle - \`Shuffle queue\`
+> skip - \`To skip the current music\`
+> skipto - \`Skip to the selected queue number\`
+> stop - \`To stop the music and clearing the queue\`
+> volume - \`To change the server song queue volume\`
 __This is a little prefix__
 > [ ${prefix} ]
 `;
