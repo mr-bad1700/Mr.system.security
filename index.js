@@ -613,37 +613,38 @@ client.on("message", message => {
     if(!message.channel.guild) return message.reply('```This command only for servers```');
     let Dashboard = `
 __Music Commands__ 
-> leave - \`Leave The Voice Channel!\`
 
-> loop - \`Toggle music loop\`
+leave - Leave The Voice Channel!
 
-> lyrics - \`Get lyrics for the currently playing song\`
+loop - Toggle music loop
 
-> nowplaying - \`To show the music which is currently playing in this server\`
+lyrics - Get lyrics for the currently playing song
 
-> pause - \`To pause the current music in the server\`
+nowplaying - To show the music which is currently playing in this server
 
-> play - \`To play songs\`
+pause - To pause the current music in the server
 
-> playlist - \`To play songs\` 
+play - To play songs
 
-> queue - \`To show the server songs queue\`
+playlist - To play songs
 
-> remove - \`Remove song from the queue\`
+queue - To show the server songs queue
 
-> resume - \`To resume the paused music\`
+remove - Remove song from the queue
 
-> search - \`To search songs\` 
+resume - To resume the paused music
 
-> shuffle - \`Shuffle queue\`
+search - To search songs
 
-> skip - \`To skip the current music\`
+shuffle - Shuffle queue
 
-> skipto - \`Skip to the selected queue number\`
+skip - To skip the current music
 
-> stop - \`To stop the music and clearing the queue\`
+skipto - Skip to the selected queue number
 
-> volume - \`To change the server song queue volume\`
+stop - To stop the music and clearing the queue
+
+volume - To change the server song queue volume
 __This is a little prefix__
 > [ ${prefix} ]
 `;
